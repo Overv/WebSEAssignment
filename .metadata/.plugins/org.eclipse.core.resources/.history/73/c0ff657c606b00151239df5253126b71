@@ -1,9 +1,0 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="755" gr:y="160" id="sv1#area1" name="Worker area" landmark="true" protected="false" defaultPage="sv1#area1#mfu1">
-  <OperationUnits>
-    <ModifyUnit gr:x="15" gr:y="300" id="sv1#area1#mfu1" name="Update1" entity="ent3">
-      <Selector id="sv1#area1#mfu1#su6" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#area1#mfu1#su6#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
-      </Selector>
-    </ModifyUnit>
-  </OperationUnits>
-</Area>

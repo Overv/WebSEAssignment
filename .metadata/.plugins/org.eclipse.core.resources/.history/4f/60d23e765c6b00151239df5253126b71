@@ -1,7 +1,0 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Worker" protected="false" homePage="sv2#page3">
-  <OperationUnits>
-    <GetUnit gr:x="300" gr:y="130" id="sv2#gtu3" name="Get3" contextParameters="UserCtxParam" linkOrder="sv2#gtu3#ln18">
-      <Link id="sv2#gtu3#ln18" name="Flow18" to="sv2#page3#dau2" automaticCoupling="true" type="transport" validate="true"/>
-    </GetUnit>
-  </OperationUnits>
-</SiteView>
