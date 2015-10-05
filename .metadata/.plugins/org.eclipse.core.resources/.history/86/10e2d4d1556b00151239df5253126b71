@@ -1,0 +1,74 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="285" gr:y="195" id="sv1#page1" name="Home">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page1#enu1" name="Login" linkOrder="sv1#page1#enu1#ln1">
+      <Field id="sv1#page1#enu1#fld1" name="Username" type="string" modifiable="true"/>
+      <Field id="sv1#page1#enu1#fld2" name="Password" type="password" modifiable="true"/>
+      <Link id="sv1#page1#enu1#ln1" name="Flow1" to="sv1#lgu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#enu1#ln1#par1" name="Username_Username" source="sv1#page1#enu1#fld1" target="sv1#lgu1.username"/>
+        <LinkParameter id="sv1#page1#enu1#ln1#par2" name="Password_Password" source="sv1#page1#enu1#fld2" target="sv1#lgu1.password"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit gr:x="80" gr:y="15" id="sv1#page1#enu2" name="RegisterWorker" linkOrder="sv1#page1#enu2#ln2">
+      <Link id="sv1#page1#enu2#ln2" name="Flow2" to="sv1#cru1" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#enu2#ln2#par3" name="Birthdate_birthdate" source="sv1#page1#enu2#fld5" target="sv1#cru1.User#att27"/>
+        <LinkParameter id="sv1#page1#enu2#ln2#par4" name="Email_email" source="sv1#page1#enu2#fld6" target="sv1#cru1.email"/>
+        <LinkParameter id="sv1#page1#enu2#ln2#par5" name="0_Group.oid(groups)" sourceValue="0" target="sv1#cru1.User2Group.groupOID"/>
+        <LinkParameter id="sv1#page1#enu2#ln2#par6" name="Name_name" source="sv1#page1#enu2#fld8" target="sv1#cru1.User#att26"/>
+        <LinkParameter id="sv1#page1#enu2#ln2#par7" name="Password_password" source="sv1#page1#enu2#fld4" target="sv1#cru1.password"/>
+        <LinkParameter id="sv1#page1#enu2#ln2#par8" name="Username_userName" source="sv1#page1#enu2#fld3" target="sv1#cru1.userName"/>
+      </Link>
+      <Field id="sv1#page1#enu2#fld3" name="Username" type="string" modifiable="true"/>
+      <Field id="sv1#page1#enu2#fld4" name="Password" type="string" modifiable="true"/>
+      <Field id="sv1#page1#enu2#fld5" name="Birthdate" type="string" modifiable="true"/>
+      <Field id="sv1#page1#enu2#fld6" name="Email" type="string" modifiable="true"/>
+      <MultiSelectionField id="sv1#page1#enu2#msfld1" name="Skills" type="string"/>
+      <Field id="sv1#page1#enu2#fld8" name="Name" type="string" modifiable="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu1">
+          <layout:Field field="sv1#page1#enu1#fld1"/>
+          <layout:Field field="sv1#page1#enu1#fld2"/>
+          <layout:Link link="sv1#page1#enu1#ln1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu2">
+          <layout:Link link="sv1#page1#enu2#ln2"/>
+          <layout:Field field="sv1#page1#enu2#fld3"/>
+          <layout:Field field="sv1#page1#enu2#fld4"/>
+          <layout:Field field="sv1#page1#enu2#fld5"/>
+          <layout:Field field="sv1#page1#enu2#fld6"/>
+          <layout:Field field="sv1#page1#enu2#msfld1"/>
+          <layout:Field field="sv1#page1#enu2#fld8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

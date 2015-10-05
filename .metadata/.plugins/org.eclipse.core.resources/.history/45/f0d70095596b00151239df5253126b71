@@ -1,0 +1,13 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Public" homePage="sv1#page1">
+  <OperationUnits>
+    <LoginUnit gr:x="300" gr:y="350" id="sv1#lgu1" name="Login1"/>
+    <CreateUnit gr:x="550" gr:y="235" id="sv1#cru1" name="NewUser" entity="User">
+      <OKLink id="sv1#cru1#oln1" name="OKFlow1" to="sv1#cru2" gr:bendpoints="-10,70,-20,-70">
+        <LinkParameter id="sv1#cru1#oln1#par21" name="0_accuracy" sourceValue="0" target="sv1#cru2.ent3#att10"/>
+        <LinkParameter id="sv1#cru1#oln1#par22" name="100_piggybank" sourceValue="100" target="sv1#cru2.ent3#att29"/>
+        <LinkParameter id="sv1#cru1#oln1#par23" name="oid_User.oid(WorkerToUser)" source="userOIDArray" target="sv1#cru2.rel4#role8.userOID"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit gr:x="550" gr:y="375" id="sv1#cru2" name="NewWorker" entity="ent3"/>
+  </OperationUnits>
+</SiteView>

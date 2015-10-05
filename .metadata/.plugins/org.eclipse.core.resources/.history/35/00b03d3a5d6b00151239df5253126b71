@@ -1,0 +1,9 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Worker" protected="false" homePage="sv2#page3">
+  <OperationUnits>
+    <GetUnit gr:x="300" gr:y="100" id="sv2#gtu3" name="Get3" contextParameters="UserCtxParam" linkOrder="sv2#gtu3#ln18">
+      <Link id="sv2#gtu3#ln18" name="Flow18" to="sv2#page3#dau2" type="transport" validate="true">
+        <LinkParameter id="sv2#gtu3#ln18#par40" name="UserCtxParam.oid_KeyCondition2 [oid]" source="sv2#gtu3.UserCtxParam" target="sv2#page3#dau2#su2#kcond2.userOID"/>
+      </Link>
+    </GetUnit>
+  </OperationUnits>
+</SiteView>

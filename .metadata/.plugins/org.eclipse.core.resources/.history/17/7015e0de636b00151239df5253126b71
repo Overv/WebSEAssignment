@@ -1,0 +1,118 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page5" name="Worker profile" protected="false" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <DataUnit id="sv1#area1#page5#dau5" name="Details1" gr:x="0" gr:y="0" entity="User" displayAll="true">
+      <Selector id="sv1#area1#page5#dau5#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#page5#dau5#su5#kcond5" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#area1#page5#dau5#ln30" name="Flow30" to="sv1#area1#page5#dau6" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page5#dau5#ln30#par53" name="UserToWorker.oid_KeyCondition7 [oid]" source="data.rel4#role7_ent3#att6" target="sv1#area1#page5#dau6#su7#kcond7.ent3#att6"/>
+      </Link>
+      <Link id="sv1#area1#page5#dau5#ln31" name="Flow31" to="sv1#area1#page5#mssu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page5#dau5#ln31#par54" name="name_Shown Messages" source="data.rel4#role7_ent3#att6" target="sv1#area1#page5#mssu1.shownMessages"/>
+      </Link>
+    </DataUnit>
+    <GetUnit id="sv1#area1#page5#gtu7" name="Get5" gr:x="140" gr:y="15" contextParameters="UserCtxParam">
+      <Link id="sv1#area1#page5#gtu7#ln23" name="Flow21" to="sv1#area1#page5#dau5" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page5#gtu7#ln23#par44" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv1#area1#page5#gtu7.UserCtxParam" target="sv1#area1#page5#dau5#su5#kcond5.userOID"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="10" gr:y="155" id="sv1#area1#page5#dau6" name="Details6" entity="ent3" displayAttributes="ent3#att10 ent3#att29">
+      <Selector id="sv1#area1#page5#dau6#su7" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#page5#dau6#su7#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <MultiMessageUnit gr:x="120" gr:y="165" id="sv1#area1#page5#mssu1" name="Message1"/>
+    <MultiChoiceIndexUnit gr:x="5" gr:y="340" id="sv1#area1#page5#mciu4" name="CheckableList4" entity="ent7" displayAttributes="ent7#att21"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page5#dau5">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att26"/>
+          <layout:Attribute attribute="User#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page5#dau6">
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page5#mssu1"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page5#mciu4">
+          <layout:Attribute attribute="ent7#att21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

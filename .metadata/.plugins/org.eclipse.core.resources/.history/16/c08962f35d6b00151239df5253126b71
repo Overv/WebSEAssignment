@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page4" name="Worker profile" protected="false" gr:x="335" gr:y="175">
+  <ContentUnits>
+    <DataUnit id="sv2#page4#dau4" name="Details1" gr:x="0" gr:y="0" entity="User" displayAll="true">
+      <Selector id="sv2#page4#dau4#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page4#dau4#su4#kcond4" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit id="sv2#page4#gtu6" name="Get5" gr:x="140" gr:y="15" contextParameters="UserCtxParam">
+      <Link id="sv2#page4#gtu6#ln22" name="Flow21" to="sv2#page4#dau4" type="transport" validate="true">
+        <LinkParameter id="sv2#page4#gtu6#ln22#par43" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv2#page4#gtu6.UserCtxParam" target="sv2#page4#dau4#su4#kcond4.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#dau4">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att26"/>
+          <layout:Attribute attribute="User#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

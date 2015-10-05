@@ -1,0 +1,12 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="690" gr:y="160" id="sv1#area1" name="Worker area" landmark="true" protected="false" defaultPage="sv1#area1#dcnu1">
+  <OperationUnits>
+    <DisconnectUnit gr:x="245" gr:y="445" id="sv1#area1#dcnu1" name="Disconnect1" relationship="rel8#role16">
+      <SourceSelector id="sv1#area1#dcnu1#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#dcnu1#su13#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area1#dcnu1#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#dcnu1#su14#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+      </TargetSelector>
+    </DisconnectUnit>
+  </OperationUnits>
+</Area>
