@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page5" name="Worker profile" protected="false" gr:x="0" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page5" name="Worker profile" protected="false" gr:x="0" gr:y="135">
   <ContentUnits>
-    <DataUnit id="sv1#area1#page5#dau5" name="Details1" gr:x="65" gr:y="0" entity="User" displayAll="true">
+    <DataUnit id="sv1#area1#page5#dau5" name="UserDetails" gr:x="175" gr:y="130" entity="User" displayAll="true">
       <Selector id="sv1#area1#page5#dau5#su5" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#page5#dau5#su5#kcond5" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
@@ -11,14 +11,14 @@
         <LinkParameter id="sv1#area1#page5#dau5#ln31#par54" name="name_Shown Messages" source="data.rel4#role7_ent3#att6" target="sv1#area1#page5#mssu1.shownMessages"/>
       </Link>
     </DataUnit>
-    <GetUnit id="sv1#area1#page5#gtu7" name="Get5" gr:x="205" gr:y="15" contextParameters="UserCtxParam">
+    <GetUnit id="sv1#area1#page5#gtu7" name="GetWorkerUser" gr:x="340" gr:y="140" contextParameters="UserCtxParam">
       <Link id="sv1#area1#page5#gtu7#ln23" name="Flow21" to="sv1#area1#page5#dau5" type="transport" validate="true">
         <LinkParameter id="sv1#area1#page5#gtu7#ln23#par44" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv1#area1#page5#gtu7.UserCtxParam" target="sv1#area1#page5#dau5#su5#kcond5.userOID"/>
       </Link>
       <Link id="sv1#area1#page5#gtu7#ln40" name="Flow40" to="sv1#area1#page5#mciu5" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv1#area1#page5#gtu7#ln44" name="Flow44" to="sv1#area1#page5#mciu6" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <DataUnit gr:x="75" gr:y="155" id="sv1#area1#page5#dau6" name="Details6" entity="ent3" displayAttributes="ent3#att10 ent3#att29">
+    <DataUnit gr:x="170" gr:y="0" id="sv1#area1#page5#dau6" name="Worker Details" entity="ent3" displayAttributes="ent3#att10 ent3#att29">
       <Selector id="sv1#area1#page5#dau6#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#page5#dau6#su7#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
       </Selector>
@@ -27,8 +27,8 @@
       </Link>
       <Link id="sv1#area1#page5#dau6#ln46" name="Flow46" to="sv1#area1#cnu1" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
-    <MultiMessageUnit gr:x="185" gr:y="165" id="sv1#area1#page5#mssu1" name="Message1"/>
-    <MultiChoiceIndexUnit gr:x="0" gr:y="290" id="sv1#area1#page5#mciu5" name="CheckableList5" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv1#area1#page5#mciu5#ln42">
+    <MultiMessageUnit gr:x="30" gr:y="145" id="sv1#area1#page5#mssu1" name="Message1"/>
+    <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page5#mciu5" name="Skills" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv1#area1#page5#mciu5#ln42">
       <Selector id="sv1#area1#page5#mciu5#su11" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area1#page5#mciu5#su11#rcond5" name="RoleCondition5" predicate="in" implied="false" role="rel4#role7.rel8#role16"/>
       </Selector>
@@ -36,7 +36,7 @@
         <LinkParameter id="sv1#area1#page5#mciu5#ln42#par59" name="Checked oid_KeyCondition13 [oid] [Skill] [Target]" source="ent7#att20Checked" target="sv1#area1#dcnu1#su14#kcond13.ent7#att20"/>
       </Link>
     </MultiChoiceIndexUnit>
-    <MultiChoiceIndexUnit gr:x="205" gr:y="290" id="sv1#area1#page5#mciu6" name="CheckableList6" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv1#area1#page5#mciu6#ln45">
+    <MultiChoiceIndexUnit gr:x="320" gr:y="0" id="sv1#area1#page5#mciu6" name="SkillsToAdd" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv1#area1#page5#mciu6#ln45">
       <Selector id="sv1#area1#page5#mciu6#su15" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area1#page5#mciu6#su15#rcond6" name="RoleCondition6" predicate="notIn" implied="false" role="rel4#role7.rel8#role16"/>
       </Selector>

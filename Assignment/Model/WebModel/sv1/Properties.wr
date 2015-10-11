@@ -1,20 +1,30 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Public" homePage="sv1#page1" landmarks="sv1#area1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Public" homePage="sv1#page1" landmarks="sv1#area1 sv1#area2">
   <OperationUnits>
-    <LoginUnit gr:x="300" gr:y="30" id="sv1#lgu1" name="Login1">
+    <LoginUnit gr:x="355" gr:y="825" id="sv1#lgu1" name="LoginFromHome">
       <OKLink id="sv1#lgu1#oln8" name="OKFlow8" to="sv1#area1#page5" automaticCoupling="true"/>
     </LoginUnit>
-    <CreateUnit gr:x="550" gr:y="235" id="sv1#cru1" name="NewUser" entity="User">
-      <OKLink id="sv1#cru1#oln1" name="OKFlow1" to="sv1#cru2" gr:bendpoints="-10,70,-20,-70">
+    <CreateUnit gr:x="690" gr:y="955" id="sv1#cru1" name="NewUserWorker" entity="User">
+      <OKLink id="sv1#cru1#oln1" name="OKFlow1" to="sv1#cru2">
         <LinkParameter id="sv1#cru1#oln1#par21" name="0_accuracy" sourceValue="0" target="sv1#cru2.ent3#att10"/>
         <LinkParameter id="sv1#cru1#oln1#par22" name="100_piggybank" sourceValue="100" target="sv1#cru2.ent3#att29"/>
         <LinkParameter id="sv1#cru1#oln1#par23" name="oid_User.oid(WorkerToUser)" source="userOIDArray" target="sv1#cru2.rel4#role8.userOID"/>
       </OKLink>
     </CreateUnit>
-    <CreateUnit gr:x="550" gr:y="375" id="sv1#cru2" name="NewWorker" entity="ent3">
+    <CreateUnit gr:x="695" gr:y="815" id="sv1#cru2" name="NewWorker" entity="ent3">
       <OKLink id="sv1#cru2#oln6" name="OKFlow6" to="sv1#lgu3" automaticCoupling="true"/>
     </CreateUnit>
-    <LoginUnit gr:x="415" gr:y="130" id="sv1#lgu3" name="Login3">
+    <LoginUnit gr:x="500" gr:y="825" id="sv1#lgu3" name="LoginNewWorker">
       <OKLink id="sv1#lgu3#oln9" name="OKFlow9" to="sv1#area1#page5" automaticCoupling="true"/>
+    </LoginUnit>
+    <CreateUnit id="sv1#cru3" name="NewUserRequester" gr:x="690" gr:y="1045" entity="User">
+      <OKLink id="sv1#cru3#oln2" name="OKFlow1" to="sv1#cru4"/>
+    </CreateUnit>
+    <CreateUnit id="sv1#cru4" name="NewRequester" gr:x="705" gr:y="1180" entity="ent6">
+      <OKLink id="sv1#cru4#oln3" name="OKFlow6" to="sv1#lgu2" automaticCoupling="true"/>
+    </CreateUnit>
+    <LoginUnit id="sv1#lgu2" name="LoginNewRequester" gr:x="480" gr:y="1190"/>
+    <LoginUnit id="sv1#lgu4" name="LoginFromHome" gr:x="340" gr:y="1190">
+      <OKLink id="sv1#lgu4#oln4" name="OKFlow8" to="sv1#area2#page2" automaticCoupling="true"/>
     </LoginUnit>
   </OperationUnits>
 </SiteView>

@@ -1,6 +1,6 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="690" gr:y="160" id="sv1#area1" name="Worker area" landmark="true" protected="false" defaultPage="sv1#area1#dcnu1">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="230" gr:y="320" id="sv1#area1" name="Worker area" landmark="true" protected="false" defaultPage="sv1#area1#dcnu1">
   <OperationUnits>
-    <DisconnectUnit gr:x="30" gr:y="485" id="sv1#area1#dcnu1" name="Disconnect1" relationship="rel8#role16">
+    <DisconnectUnit gr:x="25" gr:y="0" id="sv1#area1#dcnu1" name="RemoveSkills" relationship="rel8#role16">
       <SourceSelector id="sv1#area1#dcnu1#su13" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#dcnu1#su13#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
       </SourceSelector>
@@ -8,7 +8,7 @@
         <KeyCondition id="sv1#area1#dcnu1#su14#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
       </TargetSelector>
     </DisconnectUnit>
-    <ConnectUnit gr:x="275" gr:y="480" id="sv1#area1#cnu1" name="Connect1" relationship="rel8#role16">
+    <ConnectUnit gr:x="360" gr:y="0" id="sv1#area1#cnu1" name="AddSkills" relationship="rel8#role16">
       <SourceSelector id="sv1#area1#cnu1#su16" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#cnu1#su16#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
       </SourceSelector>
