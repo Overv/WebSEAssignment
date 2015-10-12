@@ -1,27 +1,23 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area5#page8" name="Requester profile" protected="false" gr:x="0" gr:y="0" landmark="false" customURLName="requester-profile" linkOrder="sv3#area5#page8#ln35">
   <ContentUnits>
-    <DataUnit id="sv3#area5#page8#dau11" name="UserDetails" gr:x="145" gr:y="130" entity="User" displayAll="true">
+    <DataUnit id="sv3#area5#page8#dau11" name="UserDetails" gr:x="295" gr:y="0" entity="User" displayAll="true">
       <Selector id="sv3#area5#page8#dau11#su13" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#page8#dau11#su13#kcond11" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv3#area5#page8#dau11#ln22" name="Flow30" to="sv3#area5#page8#dau12" type="transport" validate="true">
-        <LinkParameter id="sv3#area5#page8#dau11#ln22#par37" name="oid_KeyCondition7 [oid]" source="data.userOID" target="sv3#area5#page8#dau12#su14#kcond12.ent6#att15"/>
-      </Link>
-      <Link id="sv3#area5#page8#dau11#ln23" name="Flow31" to="sv3#area5#page8#mssu6" type="transport" validate="true">
-        <LinkParameter id="sv3#area5#page8#dau11#ln23#par40" name="name_Shown Messages" source="data.rel7#role13_ent6#att15" target="sv3#area5#page8#mssu6.shownMessages"/>
+      <Link id="sv3#area5#page8#dau11#ln8" name="Flow8" to="sv3#area5#page8#pwu1" type="transport" validate="true">
+        <LinkParameter id="sv3#area5#page8#dau11#ln8#par13" name="UserToRequester.oid_RoleCondition6 [oid]" source="data.rel7#role13_ent6#att15" target="sv3#area5#page8#pwu1#su2#rcond6.ent6#att15"/>
       </Link>
     </DataUnit>
-    <GetUnit id="sv3#area5#page8#gtu5" name="GetRequesterUser" gr:x="295" gr:y="140" contextParameters="UserCtxParam">
+    <GetUnit id="sv3#area5#page8#gtu5" name="GetRequesterUser" gr:x="445" gr:y="10" contextParameters="UserCtxParam">
       <Link id="sv3#area5#page8#gtu5#ln24" name="Flow21" to="sv3#area5#page8#dau11" type="transport" validate="true">
         <LinkParameter id="sv3#area5#page8#gtu5#ln24#par41" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv3#area5#page8#gtu5.UserCtxParam" target="sv3#area5#page8#dau11#su13#kcond11.userOID"/>
       </Link>
     </GetUnit>
-    <DataUnit id="sv3#area5#page8#dau12" name="Requester Details" gr:x="140" gr:y="0" entity="ent6" displayAttributes="ent6#att15">
-      <Selector id="sv3#area5#page8#dau12#su14" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#area5#page8#dau12#su14#kcond12" name="KeyCondition7" predicate="in" implied="false"/>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area5#page8#pwu1" name="Requester Annotation Campaigns" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att24 ent5#att25 ent5#att19">
+      <Selector id="sv3#area5#page8#pwu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area5#page8#pwu1#su2#rcond6" name="RoleCondition6" predicate="in" implied="false" role="rel1#role2"/>
       </Selector>
-    </DataUnit>
-    <MultiMessageUnit id="sv3#area5#page8#mssu6" name="Requester OID" gr:x="0" gr:y="145"/>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -47,55 +43,55 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#area5#page8#dau12">
-          <layout:Attribute attribute="ent6#att15"/>
+        <layout:Unit unitId="sv3#area5#page8#pwu1">
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att19"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#area5#page8#mssu6"/>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
