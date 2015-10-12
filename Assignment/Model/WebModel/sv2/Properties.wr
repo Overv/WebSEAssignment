@@ -1,3 +1,20 @@
-<SiteView id="sv2" name="Worker" protected="true">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Worker" protected="true" homePage="sv2#area6#page9" landmarks="sv2#area6">
+  <OperationUnits>
+    <ConnectUnit id="sv2#cnu2" name="AddSkills" gr:x="480" gr:y="30" relationship="rel8#role16">
+      <SourceSelector id="sv2#cnu2#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu2#su5#kcond5" name="KeyCondition14" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#cnu2#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu2#su6#kcond6" name="KeyCondition15" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
+    <DisconnectUnit id="sv2#dcnu2" name="RemoveSkills" gr:x="145" gr:y="35" relationship="rel8#role16">
+      <SourceSelector id="sv2#dcnu2#su11" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dcnu2#su11#kcond9" name="KeyCondition12" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#dcnu2#su12" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dcnu2#su12#kcond10" name="KeyCondition13" predicate="in" implied="false"/>
+      </TargetSelector>
+    </DisconnectUnit>
+  </OperationUnits>
 </SiteView>

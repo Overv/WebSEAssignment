@@ -1,0 +1,158 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area6#page9" name="Worker profile" protected="false" gr:x="0" gr:y="0" landmark="false" customURLName="worker-profile" linkOrder="sv2#area6#page9#ln34">
+  <ContentUnits>
+    <DataUnit id="sv2#area6#page9#dau13" name="UserDetails" gr:x="175" gr:y="130" entity="User" displayAll="true">
+      <Selector id="sv2#area6#page9#dau13#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area6#page9#dau13#su15#kcond13" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area6#page9#dau13#ln25" name="Flow30" to="sv2#area6#page9#dau14" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page9#dau13#ln25#par42" name="UserToWorker.oid_KeyCondition7 [oid]" source="data.rel4#role7_ent3#att6" target="sv2#area6#page9#dau14#su16#kcond14.ent3#att6"/>
+      </Link>
+      <Link id="sv2#area6#page9#dau13#ln26" name="Flow31" to="sv2#area6#page9#mssu7" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page9#dau13#ln26#par43" name="name_Shown Messages" source="data.rel4#role7_ent3#att6" target="sv2#area6#page9#mssu7.shownMessages"/>
+      </Link>
+    </DataUnit>
+    <GetUnit id="sv2#area6#page9#gtu6" name="GetWorkerUser" gr:x="340" gr:y="140" contextParameters="UserCtxParam">
+      <Link id="sv2#area6#page9#gtu6#ln27" name="Flow21" to="sv2#area6#page9#dau13" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page9#gtu6#ln27#par44" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv2#area6#page9#gtu6.UserCtxParam" target="sv2#area6#page9#dau13#su15#kcond13.userOID"/>
+      </Link>
+      <Link id="sv2#area6#page9#gtu6#ln28" name="Flow40" to="sv2#area6#page9#mciu3" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#area6#page9#gtu6#ln29" name="Flow44" to="sv2#area6#page9#mciu4" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <DataUnit id="sv2#area6#page9#dau14" name="Worker Details" gr:x="170" gr:y="0" entity="ent3" displayAttributes="ent3#att10 ent3#att29">
+      <Selector id="sv2#area6#page9#dau14#su16" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area6#page9#dau14#su16#kcond14" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area6#page9#dau14#ln30" name="Flow43" to="sv2#dcnu2" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page9#dau14#ln30#par45" name="oid_KeyCondition12 [oid] [Worker] [Source]" source="data.ent3#att6" target="sv2#dcnu2#su11#kcond9.ent3#att6"/>
+      </Link>
+      <Link id="sv2#area6#page9#dau14#ln31" name="Flow46" to="sv2#cnu2" type="transport" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <MultiMessageUnit id="sv2#area6#page9#mssu7" name="Worker OID" gr:x="30" gr:y="145"/>
+    <MultiChoiceIndexUnit id="sv2#area6#page9#mciu3" name="Skills" linkOrder="sv2#area6#page9#mciu3#ln32" gr:x="0" gr:y="0" entity="ent7" displayAttributes="ent7#att21">
+      <Selector id="sv2#area6#page9#mciu3#su17" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area6#page9#mciu3#su17#rcond3" name="RoleCondition5" predicate="in" implied="false" role="rel4#role7.rel8#role16"/>
+      </Selector>
+      <Link id="sv2#area6#page9#mciu3#ln32" name="Delete skills" to="sv2#dcnu2" type="normal" validate="true">
+        <LinkParameter id="sv2#area6#page9#mciu3#ln32#par46" name="Checked oid_KeyCondition13 [oid] [Skill] [Target]" source="ent7#att20Checked" target="sv2#dcnu2#su12#kcond10.ent7#att20"/>
+      </Link>
+    </MultiChoiceIndexUnit>
+    <MultiChoiceIndexUnit id="sv2#area6#page9#mciu4" name="SkillsToAdd" linkOrder="sv2#area6#page9#mciu4#ln33" gr:x="320" gr:y="0" entity="ent7" displayAttributes="ent7#att21">
+      <Selector id="sv2#area6#page9#mciu4#su18" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area6#page9#mciu4#su18#rcond4" name="RoleCondition6" predicate="notIn" implied="false" role="rel4#role7.rel8#role16"/>
+      </Selector>
+      <Link id="sv2#area6#page9#mciu4#ln33" name="Add skills" to="sv2#cnu2" type="normal" automaticCoupling="true" validate="true"/>
+    </MultiChoiceIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area6#page9#dau13">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att26"/>
+          <layout:Attribute attribute="User#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area6#page9#dau14">
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area6#page9#mssu7"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area6#page9#mciu3">
+          <layout:Attribute attribute="ent7#att21"/>
+          <layout:Link link="sv2#area6#page9#mciu3#ln32"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area6#page9#mciu4">
+          <layout:Attribute attribute="ent7#att21"/>
+          <layout:Link link="sv2#area6#page9#mciu4#ln33"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#area6#page9#ln34" name="Log out worker" to="sv2#area6#lou2" automaticCoupling="true" type="normal" validate="true"/>
+</Page>
