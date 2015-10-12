@@ -7,6 +7,9 @@
       <Link id="sv3#area5#page8#dau11#ln8" name="Flow8" to="sv3#area5#page8#pwu1" type="transport" validate="true">
         <LinkParameter id="sv3#area5#page8#dau11#ln8#par13" name="UserToRequester.oid_RoleCondition6 [oid]" source="data.rel7#role13_ent6#att15" target="sv3#area5#page8#pwu1#su2#rcond6.ent6#att15"/>
       </Link>
+      <Link id="sv3#area5#page8#dau11#ln12" name="Flow11" to="sv3#area5#page8#enu4" type="transport" validate="true">
+        <LinkParameter id="sv3#area5#page8#dau11#ln12#par18" name="UserToRequester.oid_PASSING" source="data.rel7#role13_ent6#att15" passing="true"/>
+      </Link>
     </DataUnit>
     <GetUnit id="sv3#area5#page8#gtu5" name="GetRequesterUser" gr:x="445" gr:y="10" contextParameters="UserCtxParam">
       <Link id="sv3#area5#page8#gtu5#ln24" name="Flow21" to="sv3#area5#page8#dau11" type="transport" validate="true">
@@ -18,6 +21,16 @@
         <RelationshipRoleCondition id="sv3#area5#page8#pwu1#su2#rcond6" name="RoleCondition6" predicate="in" implied="false" role="rel1#role2"/>
       </Selector>
     </PowerIndexUnit>
+    <EntryUnit gr:x="295" gr:y="130" id="sv3#area5#page8#enu4" name="Add Campaign" linkOrder="sv3#area5#page8#enu4#ln10">
+      <Link id="sv3#area5#page8#enu4#ln10" name="Add Campaign" to="sv3#area5#cru5" type="normal" validate="true">
+        <LinkParameter id="sv3#area5#page8#enu4#ln10#par14" name="Budget_budget" source="sv3#area5#page8#enu4#fld14" target="sv3#area5#cru5.ent5#att19"/>
+        <LinkParameter id="sv3#area5#page8#enu4#ln10#par16" name="Name_name" source="sv3#area5#page8#enu4#fld13" target="sv3#area5#cru5.ent5#att24"/>
+        <LinkParameter id="sv3#area5#page8#enu4#ln10#par17" name="false_status" sourceValue="false" target="sv3#area5#cru5.ent5#att25"/>
+        <LinkParameter id="sv3#area5#page8#enu4#ln10#par19" name="UserToRequester.oid_PASSING_Requester.oid(AnnotationCampaignToRequester)" sourceLinkParameter="sv3#area5#page8#dau11#ln12#par18" target="sv3#area5#cru5.rel1#role1.ent6#att15"/>
+      </Link>
+      <Field id="sv3#area5#page8#enu4#fld13" name="Name" type="string" modifiable="true"/>
+      <Field id="sv3#area5#page8#enu4#fld14" name="Budget" type="float" modifiable="true"/>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -105,7 +118,13 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page8#enu4">
+          <layout:Link link="sv3#area5#page8#enu4#ln10"/>
+          <layout:Field field="sv3#area5#page8#enu4#fld13"/>
+          <layout:Field field="sv3#area5#page8#enu4#fld14"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

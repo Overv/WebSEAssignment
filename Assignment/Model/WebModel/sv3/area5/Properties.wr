@@ -1,5 +1,6 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="75" gr:y="195" id="sv3#area5" name="Requester area" landmark="true" customURLName="requester" defaultPage="sv3#area5#page8">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="75" gr:y="220" id="sv3#area5" name="Requester area" landmark="true" customURLName="requester" defaultPage="sv3#area5#page8">
   <OperationUnits>
-    <LogoutUnit id="sv3#area5#lou3" name="LogoutRequester" customDescriptor="false" customURLName="logout-worker" gr:x="230" gr:y="170" siteView="sv1"/>
+    <LogoutUnit id="sv3#area5#lou3" name="LogoutRequester" customDescriptor="false" customURLName="logout-worker" gr:x="0" gr:y="260" siteView="sv1"/>
+    <CreateUnit gr:x="260" gr:y="280" id="sv3#area5#cru5" name="Create AnnotationCampaign" entity="ent5"/>
   </OperationUnits>
 </Area>
