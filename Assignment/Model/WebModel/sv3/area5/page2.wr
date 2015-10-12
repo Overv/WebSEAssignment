@@ -7,18 +7,26 @@
       <Link id="sv3#area5#page2#dau1#ln22" name="Flow22" to="sv3#area5#page2#pwu2" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#area5#page2#dau1#ln36" name="Flow36" to="sv3#area5#cru7" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
-    <PowerIndexUnit gr:x="120" gr:y="0" id="sv3#area5#page2#pwu2" name="AnnotationCampaign Tasks" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att5 ent2#att23 ent2#att7" linkOrder="sv3#area5#page2#pwu2#ln37">
+    <PowerIndexUnit gr:x="120" gr:y="0" id="sv3#area5#page2#pwu2" name="AnnotationCampaign Tasks" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att5 ent2#att23 ent2#att7 ent2#att8 ent2#att9 ent2#att16 ent2#att17" linkOrder="sv3#area5#page2#pwu2#ln37">
       <Selector id="sv3#area5#page2#pwu2#su4" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area5#page2#pwu2#su4#rcond9" name="RoleCondition9" predicate="in" implied="false" role="rel2#role3"/>
       </Selector>
       <Link id="sv3#area5#page2#pwu2#ln37" name="Task details" to="sv3#area5#page3#dau2" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
-    <EntryUnit gr:x="0" gr:y="150" id="sv3#area5#page2#enu8" name="Add Task" linkOrder="sv3#area5#page2#enu8#ln23">
-      <Field id="sv3#area5#page2#enu8#fld21" name="Name" type="string" modifiable="true"/>
+    <EntryUnit gr:x="0" gr:y="150" id="sv3#area5#page2#enu8" name="Add Task" linkOrder="sv3#area5#page2#enu8#ln23" fieldOrder="sv3#area5#page2#enu8#fld21 sv3#area5#page2#enu8#fld15 sv3#area5#page2#enu8#fld16 sv3#area5#page2#enu8#fld17 sv3#area5#page2#enu8#fld18">
+      <Field id="sv3#area5#page2#enu8#fld21" name="Title" type="string" modifiable="true"/>
       <Link id="sv3#area5#page2#enu8#ln23" name="Add Task" to="sv3#area5#cru7" type="normal" validate="true">
         <LinkParameter id="sv3#area5#page2#enu8#ln23#par49" name="false_completed" sourceValue="false" target="sv3#area5#cru7.ent2#att23"/>
         <LinkParameter id="sv3#area5#page2#enu8#ln23#par50" name="Name_name" source="sv3#area5#page2#enu8#fld21" target="sv3#area5#cru7.ent2#att7"/>
+        <LinkParameter id="sv3#area5#page2#enu8#ln23#par10" name="Description_description" source="sv3#area5#page2#enu8#fld15" target="sv3#area5#cru7.ent2#att8"/>
+        <LinkParameter id="sv3#area5#page2#enu8#ln23#par11" name="Expiration timestamp_expiration" source="sv3#area5#page2#enu8#fld18" target="sv3#area5#cru7.ent2#att17"/>
+        <LinkParameter id="sv3#area5#page2#enu8#ln23#par12" name="Maximum execution time_maxtime" source="sv3#area5#page2#enu8#fld17" target="sv3#area5#cru7.ent2#att16"/>
+        <LinkParameter id="sv3#area5#page2#enu8#ln23#par20" name="Reward_reward" source="sv3#area5#page2#enu8#fld16" target="sv3#area5#cru7.ent2#att9"/>
       </Link>
+      <Field id="sv3#area5#page2#enu8#fld15" name="Description" type="string" modifiable="true"/>
+      <Field id="sv3#area5#page2#enu8#fld16" name="Reward" type="float" modifiable="true"/>
+      <Field id="sv3#area5#page2#enu8#fld18" name="Expiration timestamp" type="timestamp" modifiable="true"/>
+      <Field id="sv3#area5#page2#enu8#fld17" name="Maximum execution time" type="time" modifiable="true"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -45,10 +53,14 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area5#page2#pwu2">
+          <layout:Link link="sv3#area5#page2#pwu2#ln37"/>
           <layout:Attribute attribute="ent2#att5"/>
           <layout:Attribute attribute="ent2#att23"/>
           <layout:Attribute attribute="ent2#att7"/>
-          <layout:Link link="sv3#area5#page2#pwu2#ln37"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att16"/>
+          <layout:Attribute attribute="ent2#att17"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -66,8 +78,12 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area5#page2#enu8">
-          <layout:Field field="sv3#area5#page2#enu8#fld21"/>
           <layout:Link link="sv3#area5#page2#enu8#ln23"/>
+          <layout:Field field="sv3#area5#page2#enu8#fld21"/>
+          <layout:Field field="sv3#area5#page2#enu8#fld15"/>
+          <layout:Field field="sv3#area5#page2#enu8#fld16"/>
+          <layout:Field field="sv3#area5#page2#enu8#fld17"/>
+          <layout:Field field="sv3#area5#page2#enu8#fld18"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
