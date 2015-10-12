@@ -50,8 +50,8 @@
           <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="password"/>
           <layout:Attribute attribute="email"/>
-          <layout:Attribute attribute="User#att26"/>
           <layout:Attribute attribute="User#att27"/>
+          <layout:Attribute attribute="User#att26"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

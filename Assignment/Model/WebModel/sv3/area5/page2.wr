@@ -1,0 +1,84 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area5#page2" name="AnnotationCampaign">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#area5#page2#dau1" name="AnnotationCampaign details" entity="ent5" displayAll="true">
+      <Selector id="sv3#area5#page2#dau1#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area5#page2#dau1#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area5#page2#dau1#ln22" name="Flow22" to="sv3#area5#page2#pwu2" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area5#page2#dau1#ln36" name="Flow36" to="sv3#area5#cru7" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <PowerIndexUnit gr:x="130" gr:y="135" id="sv3#area5#page2#pwu2" name="AnnotationCampaign Tasks" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att5 ent2#att23 ent2#att7">
+      <Selector id="sv3#area5#page2#pwu2#su4" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area5#page2#pwu2#su4#rcond9" name="RoleCondition9" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="10" gr:y="155" id="sv3#area5#page2#enu8" name="Add Task" linkOrder="sv3#area5#page2#enu8#ln23">
+      <Field id="sv3#area5#page2#enu8#fld21" name="Name" type="string" modifiable="true"/>
+      <Link id="sv3#area5#page2#enu8#ln23" name="Add Task" to="sv3#area5#cru7" type="normal" validate="true">
+        <LinkParameter id="sv3#area5#page2#enu8#ln23#par49" name="false_completed" sourceValue="false" target="sv3#area5#cru7.ent2#att23"/>
+        <LinkParameter id="sv3#area5#page2#enu8#ln23#par50" name="Name_name" source="sv3#area5#page2#enu8#fld21" target="sv3#area5#cru7.ent2#att7"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page2#dau1">
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att19"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page2#pwu2">
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att23"/>
+          <layout:Attribute attribute="ent2#att7"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page2#enu8">
+          <layout:Field field="sv3#area5#page2#enu8#fld21"/>
+          <layout:Link link="sv3#area5#page2#enu8#ln23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
