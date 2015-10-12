@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area5#page8" name="Requester profile" protected="false" gr:x="370" gr:y="0" landmark="false" customURLName="requester-profile" linkOrder="sv3#area5#page8#ln35">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area5#page8" name="Requester profile" protected="false" gr:x="505" gr:y="0" landmark="false" customURLName="requester-profile" linkOrder="sv3#area5#page8#ln35">
   <ContentUnits>
-    <DataUnit id="sv3#area5#page8#dau11" name="UserDetails" gr:x="295" gr:y="0" entity="User" displayAll="true">
+    <DataUnit id="sv3#area5#page8#dau11" name="UserDetails" gr:x="290" gr:y="0" entity="User" displayAll="true">
       <Selector id="sv3#area5#page8#dau11#su13" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#page8#dau11#su13#kcond11" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
@@ -11,18 +11,18 @@
         <LinkParameter id="sv3#area5#page8#dau11#ln12#par18" name="UserToRequester.oid_PASSING" source="data.rel7#role13_ent6#att15" passing="true"/>
       </Link>
     </DataUnit>
-    <GetUnit id="sv3#area5#page8#gtu5" name="GetRequesterUser" gr:x="445" gr:y="10" contextParameters="UserCtxParam">
+    <GetUnit id="sv3#area5#page8#gtu5" name="GetRequesterUser" gr:x="440" gr:y="10" contextParameters="UserCtxParam">
       <Link id="sv3#area5#page8#gtu5#ln24" name="Flow21" to="sv3#area5#page8#dau11" type="transport" validate="true">
         <LinkParameter id="sv3#area5#page8#gtu5#ln24#par41" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv3#area5#page8#gtu5.UserCtxParam" target="sv3#area5#page8#dau11#su13#kcond11.userOID"/>
       </Link>
     </GetUnit>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area5#page8#pwu1" name="Requester Annotation Campaigns" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att14 ent5#att24 ent5#att25 ent5#att19" linkOrder="sv3#area5#page8#pwu1#ln18">
+    <PowerIndexUnit gr:x="0" gr:y="135" id="sv3#area5#page8#pwu1" name="Requester Annotation Campaigns" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att14 ent5#att24 ent5#att25 ent5#att19" linkOrder="sv3#area5#page8#pwu1#ln18">
       <Selector id="sv3#area5#page8#pwu1#su2" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area5#page8#pwu1#su2#rcond6" name="RoleCondition6" predicate="in" implied="false" role="rel1#role2"/>
       </Selector>
       <Link id="sv3#area5#page8#pwu1#ln18" name="Campaign details" to="sv3#area5#page2#dau1" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
-    <EntryUnit gr:x="295" gr:y="130" id="sv3#area5#page8#enu4" name="Add Campaign" linkOrder="sv3#area5#page8#enu4#ln10" entity="ent5">
+    <EntryUnit gr:x="290" gr:y="130" id="sv3#area5#page8#enu4" name="Add Campaign" linkOrder="sv3#area5#page8#enu4#ln10" entity="ent5">
       <Link id="sv3#area5#page8#enu4#ln10" name="Add Campaign" to="sv3#area5#cru5" type="normal" validate="true">
         <LinkParameter id="sv3#area5#page8#enu4#ln10#par14" name="Budget_budget" source="sv3#area5#page8#enu4#fld14" target="sv3#area5#cru5.ent5#att19"/>
         <LinkParameter id="sv3#area5#page8#enu4#ln10#par16" name="Name_name" source="sv3#area5#page8#enu4#fld13" target="sv3#area5#cru5.ent5#att24"/>
