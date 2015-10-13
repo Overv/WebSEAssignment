@@ -1,10 +1,26 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="10" id="sv3#area5#page3" name="Task" customURLName="task">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="0" id="sv3#area5#page3#dau2" name="Task details" entity="ent2" displayAttributes="ent2#att5 ent2#att23 ent2#att7 ent2#att8 ent2#att9 ent2#att16 ent2#att17">
+    <DataUnit gr:x="105" gr:y="0" id="sv3#area5#page3#dau2" name="Task details" entity="ent2" displayAttributes="ent2#att5 ent2#att23 ent2#att7 ent2#att8 ent2#att9 ent2#att16 ent2#att17">
       <Selector id="sv3#area5#page3#dau2#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#page3#dau2#su7#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv3#area5#page3#dau2#ln7" name="Flow7" to="sv3#area5#page3#mciu2" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area5#page3#dau2#ln16" name="Flow16" to="sv3#area5#page3#mciu5" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area5#page3#dau2#ln20" name="Flow20" to="sv3#area5#dcnu1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area5#page3#dau2#ln21" name="Flow21" to="sv3#area5#cnu1" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
+    <MultiChoiceIndexUnit gr:x="0" gr:y="140" id="sv3#area5#page3#mciu2" name="Skills" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv3#area5#page3#mciu2#ln17">
+      <Selector id="sv3#area5#page3#mciu2#su1" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area5#page3#mciu2#su1#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel9#role18"/>
+      </Selector>
+      <Link id="sv3#area5#page3#mciu2#ln17" name="Remove Skills" to="sv3#area5#dcnu1" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiChoiceIndexUnit>
+    <MultiChoiceIndexUnit gr:x="180" gr:y="135" id="sv3#area5#page3#mciu5" name="Skills to add" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv3#area5#page3#mciu5#ln19">
+      <Selector id="sv3#area5#page3#mciu5#su20" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area5#page3#mciu5#su20#rcond2" name="RoleCondition2" predicate="notIn" implied="false" role="rel9#role18"/>
+      </Selector>
+      <Link id="sv3#area5#page3#mciu5#ln19" name="Add Skills" to="sv3#area5#cnu1" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiChoiceIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -17,6 +33,44 @@
           <layout:Attribute attribute="ent2#att9"/>
           <layout:Attribute attribute="ent2#att16"/>
           <layout:Attribute attribute="ent2#att17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page3#mciu2">
+          <layout:Attribute attribute="ent7#att21"/>
+          <layout:Link link="sv3#area5#page3#mciu2#ln17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page3#mciu5">
+          <layout:Attribute attribute="ent7#att21"/>
+          <layout:Link link="sv3#area5#page3#mciu5#ln19"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

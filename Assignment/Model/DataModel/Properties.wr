@@ -54,14 +54,14 @@
     <Attribute id="ent1#att3" name="caption" type="string" db:column="caption"/>
     <Attribute id="ent1#att4" name="url" type="string" db:column="url"/>
   </Entity>
-  <Entity gr:x="160" gr:y="505" id="ent2" name="Task" duration="persistent" attributeOrder="ent2#att5 ent2#att23 ent2#att7 ent2#att8 ent2#att9 ent2#att16 ent2#att17" db:database="db1" db:table="task">
+  <Entity gr:x="145" gr:y="520" id="ent2" name="Task" duration="persistent" attributeOrder="ent2#att5 ent2#att23 ent2#att7 ent2#att8 ent2#att9 ent2#att16 ent2#att17" db:database="db1" db:table="task">
     <Attribute id="ent2#att5" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent2#att23" name="completed" type="boolean" db:column="completed" key="false"/>
-    <Attribute id="ent2#att17" name="expiration" type="timestamp"/>
-    <Attribute id="ent2#att16" name="maxtime" type="float"/>
-    <Attribute id="ent2#att9" name="reward" type="float"/>
-    <Attribute id="ent2#att8" name="description" type="string"/>
-    <Attribute id="ent2#att7" name="title" type="string"/>
+    <Attribute id="ent2#att23" name="completed" type="boolean" key="false" db:column="completed"/>
+    <Attribute id="ent2#att17" name="expiration" type="timestamp" db:column="expiration"/>
+    <Attribute id="ent2#att16" name="maxtime" type="float" db:column="maxtime"/>
+    <Attribute id="ent2#att9" name="reward" type="float" db:column="reward"/>
+    <Attribute id="ent2#att8" name="description" type="string" db:column="description"/>
+    <Attribute id="ent2#att7" name="title" type="string" db:column="title"/>
   </Entity>
   <Entity gr:x="175" gr:y="350" id="ent3" name="Worker" duration="persistent" attributeOrder="ent3#att6 ent3#att10 ent3#att29" db:database="db1" db:table="worker">
     <Attribute id="ent3#att6" key="true" name="oid" type="integer" db:column="oid"/>
@@ -166,5 +166,5 @@
       <db:JoinColumn attribute="ent2#att5" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/assignment" username="postgres" password="dGVzdA==" cryptedPassword="true" schema="public"/>
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/assignment" username="postgres" password="bGlldmVyZA==" cryptedPassword="true" schema="public"/>
 </DataModel>

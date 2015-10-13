@@ -1,6 +1,6 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Public" homePage="sv1#page1" landmarks="sv1#page1">
   <OperationUnits>
-    <LoginUnit gr:x="175" gr:y="1010" id="sv1#lgu1" name="LoginFromHome"/>
+    <LoginUnit gr:x="170" gr:y="1010" id="sv1#lgu1" name="LoginFromHome"/>
     <CreateUnit gr:x="690" gr:y="955" id="sv1#cru1" name="NewUserWorker" entity="User">
       <OKLink id="sv1#cru1#oln1" name="OKFlow1" to="sv1#cru2">
         <LinkParameter id="sv1#cru1#oln1#par21" name="0_accuracy" sourceValue="0" target="sv1#cru2.ent3#att10"/>
