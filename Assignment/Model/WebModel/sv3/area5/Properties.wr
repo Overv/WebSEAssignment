@@ -1,17 +1,9 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-1020" gr:y="-60" id="sv3#area5" name="Requester area" landmark="true" customURLName="requester" defaultPage="sv3#area5#page8">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-960" gr:y="-65" id="sv3#area5" name="Requester area" landmark="true" customURLName="requester" defaultPage="sv3#area5#page8">
   <OperationUnits>
-    <LogoutUnit id="sv3#area5#lou3" name="LogoutRequester" customDescriptor="false" customURLName="logout-requester" gr:x="1000" gr:y="575" siteView="sv1"/>
-    <CreateUnit gr:x="1265" gr:y="600" id="sv3#area5#cru5" name="Create AnnotationCampaign" entity="ent5"/>
-    <CreateUnit gr:x="770" gr:y="575" id="sv3#area5#cru7" name="Create Task" entity="ent2"/>
-    <ConnectUnit gr:x="380" gr:y="620" id="sv3#area5#cnu1" name="Add Skills" relationship="rel9#role17">
-      <SourceSelector id="sv3#area5#cnu1#su14" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#area5#cnu1#su14#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
-      </SourceSelector>
-      <TargetSelector id="sv3#area5#cnu1#su19" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#area5#cnu1#su19#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
-      </TargetSelector>
-    </ConnectUnit>
-    <DisconnectUnit gr:x="205" gr:y="620" id="sv3#area5#dcnu1" name="Remove Skills" relationship="rel9#role17">
+    <LogoutUnit id="sv3#area5#lou3" name="LogoutRequester" customDescriptor="false" customURLName="logout-requester" gr:x="1110" gr:y="600" siteView="sv1"/>
+    <CreateUnit gr:x="1285" gr:y="595" id="sv3#area5#cru5" name="Create AnnotationCampaign" entity="ent5"/>
+    <CreateUnit gr:x="885" gr:y="565" id="sv3#area5#cru7" name="Create Task" entity="ent2"/>
+    <DisconnectUnit gr:x="40" gr:y="605" id="sv3#area5#dcnu1" name="Remove Skills" relationship="rel9#role17">
       <SourceSelector id="sv3#area5#dcnu1#su21" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#dcnu1#su21#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
       </SourceSelector>
@@ -19,7 +11,7 @@
         <KeyCondition id="sv3#area5#dcnu1#su22#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
       </TargetSelector>
     </DisconnectUnit>
-    <DisconnectUnit gr:x="0" gr:y="255" id="sv3#area5#dcnu3" name="Remove workers" relationship="rel5#role10">
+    <DisconnectUnit gr:x="10" gr:y="0" id="sv3#area5#dcnu3" name="Remove workers" relationship="rel5#role10">
       <SourceSelector id="sv3#area5#dcnu3#su24" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#dcnu3#su24#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
       </SourceSelector>
@@ -27,7 +19,7 @@
         <KeyCondition id="sv3#area5#dcnu3#su25#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
       </TargetSelector>
     </DisconnectUnit>
-    <ConnectUnit gr:x="400" gr:y="0" id="sv3#area5#cnu3" name="Add workers" relationship="rel5#role10">
+    <ConnectUnit gr:x="385" gr:y="0" id="sv3#area5#cnu3" name="Add workers" relationship="rel5#role10">
       <SourceSelector id="sv3#area5#cnu3#su26" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#cnu3#su26#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
       </SourceSelector>
@@ -35,10 +27,18 @@
         <KeyCondition id="sv3#area5#cnu3#su27#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
       </TargetSelector>
     </ConnectUnit>
-    <ModifyUnit gr:x="645" gr:y="165" id="sv3#area5#mfu1" name="Update Campaign Details" entity="ent5">
+    <ModifyUnit gr:x="695" gr:y="155" id="sv3#area5#mfu1" name="Update Campaign Details" entity="ent5">
       <Selector id="sv3#area5#mfu1#su28" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#mfu1#su28#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
     </ModifyUnit>
+    <ConnectUnit gr:x="245" gr:y="605" id="sv3#area5#cnu5" name="Add Skills" relationship="rel9#role17">
+      <SourceSelector id="sv3#area5#cnu5#su20" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area5#cnu5#su20#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv3#area5#cnu5#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area5#cnu5#su29#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
   </OperationUnits>
 </Area>
