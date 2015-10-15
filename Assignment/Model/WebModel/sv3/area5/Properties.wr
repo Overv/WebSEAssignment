@@ -1,7 +1,7 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-1020" gr:y="-60" id="sv3#area5" name="Requester area" landmark="true" customURLName="requester" defaultPage="sv3#area5#page8">
   <OperationUnits>
     <LogoutUnit id="sv3#area5#lou3" name="LogoutRequester" customDescriptor="false" customURLName="logout-requester" gr:x="1000" gr:y="575" siteView="sv1"/>
-    <CreateUnit gr:x="1265" gr:y="560" id="sv3#area5#cru5" name="Create AnnotationCampaign" entity="ent5"/>
+    <CreateUnit gr:x="1265" gr:y="600" id="sv3#area5#cru5" name="Create AnnotationCampaign" entity="ent5"/>
     <CreateUnit gr:x="770" gr:y="575" id="sv3#area5#cru7" name="Create Task" entity="ent2"/>
     <ConnectUnit gr:x="380" gr:y="620" id="sv3#area5#cnu1" name="Add Skills" relationship="rel9#role17">
       <SourceSelector id="sv3#area5#cnu1#su14" defaultPolicy="fill" booleanOperator="and">
