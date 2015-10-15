@@ -58,10 +58,11 @@
     <Attribute id="ent2#att5" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att23" name="completed" type="boolean" key="false" db:column="completed"/>
     <Attribute id="ent2#att17" name="expiration" type="timestamp" db:column="expiration"/>
-    <Attribute id="ent2#att16" name="maxtime" type="float" db:column="maxtime"/>
+    <Attribute id="ent2#att16" name="maxtime" type="time" db:column="maxtime"/>
     <Attribute id="ent2#att9" name="reward" type="float" db:column="reward"/>
     <Attribute id="ent2#att8" name="description" type="string" db:column="description"/>
     <Attribute id="ent2#att7" name="title" type="string" db:column="title"/>
+    <Attribute id="ent2#att18" name="name" db:column="name" type="string" key="false"/>
   </Entity>
   <Entity gr:x="175" gr:y="350" id="ent3" name="Worker" duration="persistent" attributeOrder="ent3#att6 ent3#att10 ent3#att29" db:database="db1" db:table="worker">
     <Attribute id="ent3#att6" key="true" name="oid" type="integer" db:column="oid"/>
