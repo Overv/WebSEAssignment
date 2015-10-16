@@ -19,7 +19,7 @@
         <KeyCondition id="sv3#area5#dcnu3#su25#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
       </TargetSelector>
     </DisconnectUnit>
-    <ConnectUnit gr:x="385" gr:y="0" id="sv3#area5#cnu3" name="Add workers" relationship="rel5#role10">
+    <ConnectUnit gr:x="195" gr:y="0" id="sv3#area5#cnu3" name="Add workers" relationship="rel5#role10">
       <SourceSelector id="sv3#area5#cnu3#su26" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#cnu3#su26#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
       </SourceSelector>
