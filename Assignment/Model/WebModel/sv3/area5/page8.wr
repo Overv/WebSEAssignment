@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area5#page8" name="Requester profile" protected="false" gr:x="1105" gr:y="265" landmark="false" customURLName="requester-profile" linkOrder="sv3#area5#page8#ln35">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area5#page8" name="Requester profile" protected="false" gr:x="1270" gr:y="265" landmark="false" customURLName="requester-profile" linkOrder="sv3#area5#page8#ln35">
   <ContentUnits>
     <DataUnit id="sv3#area5#page8#dau11" name="UserDetails" gr:x="290" gr:y="0" entity="User" displayAll="true">
       <Selector id="sv3#area5#page8#dau11#su13" defaultPolicy="fill" booleanOperator="and">
@@ -17,9 +17,7 @@
       </Link>
     </GetUnit>
     <PowerIndexUnit gr:x="0" gr:y="135" id="sv3#area5#page8#pwu1" name="Requester Annotation Campaigns" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att14 ent5#att24 ent5#att25 ent5#att19" linkOrder="sv3#area5#page8#pwu1#ln18">
-      <Selector id="sv3#area5#page8#pwu1#su2" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv3#area5#page8#pwu1#su2#rcond6" name="RoleCondition6" predicate="in" implied="false" role="rel1#role2"/>
-      </Selector>
+      <Selector id="sv3#area5#page8#pwu1#su2" defaultPolicy="fill" booleanOperator="and"/>
       <Link id="sv3#area5#page8#pwu1#ln18" name="Campaign details" to="sv3#area5#page2#dau1" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
     <EntryUnit gr:x="290" gr:y="130" id="sv3#area5#page8#enu4" name="Add Campaign" linkOrder="sv3#area5#page8#enu4#ln10" entity="ent5">
@@ -40,8 +38,8 @@
           <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="password"/>
           <layout:Attribute attribute="email"/>
-          <layout:Attribute attribute="User#att27"/>
           <layout:Attribute attribute="User#att26"/>
+          <layout:Attribute attribute="User#att27"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

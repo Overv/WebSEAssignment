@@ -167,8 +167,7 @@
       <db:JoinColumn attribute="ent2#att5" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/assignment" username="postgres" password="bGlldmVyZA==" cryptedPassword="true" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/assignment" username="postgres" password="bGlldmVyZA==" cryptedPassword="true" schema="public"/>
   <Relationship id="rel11" name="AnnotationCampaign_Item" sourceEntity="ent5" targetEntity="ent1" db:database="db1" db:table="item">
     <RelationshipRole1 id="rel11#role21" name="AnnotationCampaignToItem" maxCard="N">
       <db:JoinColumn attribute="ent5#att14" name="annotationcampaign_oid"/>
