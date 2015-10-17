@@ -1,0 +1,93 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area6#page6" name="Items" gr:x="355" gr:y="305">
+  <ContentUnits>
+    <DataUnit id="sv2#area6#page6#dau5" name="Item Details" gr:x="5" gr:y="0" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4">
+      <Selector id="sv2#area6#page6#dau5#su39" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area6#page6#dau5#su39#kcond25" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area6#page6#dau5#ln60" name="Flow60" to="sv2#area6#page6#pwu8" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#area6#page6#dau5#ln62" name="Flow62" to="sv2#area6#cru6" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <PowerIndexUnit id="sv2#area6#page6#pwu8" name="Annotations" gr:x="5" gr:y="125" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att11 ent4#att12 ent4#att13">
+      <Selector id="sv2#area6#page6#pwu8#su42" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area6#page6#pwu8#su42#rcond12" name="RoleCondition12" role="rel6#role12" predicate="in" implied="false"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="0" gr:y="250" id="sv2#area6#page6#enu5" name="Annotation Form" fieldOrder="sv2#area6#page6#enu5#fld24 sv2#area6#page6#enu5#fld25" linkOrder="sv2#area6#page6#enu5#ln61">
+      <Field id="sv2#area6#page6#enu5#fld24" name="Label" type="string" modifiable="true"/>
+      <Field id="sv2#area6#page6#enu5#fld25" name="Confidence" type="integer" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="sv2#area6#page6#enu5#fld25#cmp1" name="greater than 1" predicate="gteq" value="1"/>
+          <CompareValidationRule id="sv2#area6#page6#enu5#fld25#cmp2" name="Smaller than 5" predicate="lteq" value="5"/>
+        </VRules>
+      </Field>
+      <Link id="sv2#area6#page6#enu5#ln61" name="Add Annotation" to="sv2#area6#cru6" type="normal" validate="true">
+        <LinkParameter id="sv2#area6#page6#enu5#ln61#par24" name="Confidence_confidence" source="sv2#area6#page6#enu5#fld25" target="sv2#area6#cru6.ent4#att13"/>
+        <LinkParameter id="sv2#area6#page6#enu5#ln61#par32" name="Label_label" source="sv2#area6#page6#enu5#fld24" target="sv2#area6#cru6.ent4#att12"/>
+      </Link>
+      <VRules/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area6#page6#dau5">
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area6#page6#pwu8">
+          <layout:Attribute attribute="ent4#att11"/>
+          <layout:Attribute attribute="ent4#att12"/>
+          <layout:Attribute attribute="ent4#att13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area6#page6#enu5">
+          <layout:Field field="sv2#area6#page6#enu5#fld24"/>
+          <layout:Field field="sv2#area6#page6#enu5#fld25"/>
+          <layout:Link link="sv2#area6#page6#enu5#ln61"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

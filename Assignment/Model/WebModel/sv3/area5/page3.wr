@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="165" id="sv3#area5#page3" name="Task" customURLName="task">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="155" id="sv3#area5#page3" name="Task" customURLName="task">
   <ContentUnits>
-    <DataUnit gr:x="105" gr:y="160" id="sv3#area5#page3#dau2" name="Task details" entity="ent2" displayAttributes="ent2#att5 ent2#att23 ent2#att7 ent2#att8 ent2#att9 ent2#att16 ent2#att17">
+    <DataUnit gr:x="105" gr:y="165" id="sv3#area5#page3#dau2" name="Task details" entity="ent2" displayAttributes="ent2#att5 ent2#att23 ent2#att7 ent2#att8 ent2#att9 ent2#att16 ent2#att17 ent2#att18 rel10#role20.ent3#att6 rel10#role20.ent3#att10 rel10#role20.ent3#att29">
       <Selector id="sv3#area5#page3#dau2#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#page3#dau2#su7#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
@@ -18,56 +18,67 @@
       <Link id="sv3#area5#page3#dau2#ln39" name="Flow39" to="sv3#area5#page3#mciu7" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#area5#page3#dau2#ln40" name="Flow40" to="sv3#area5#page3#mciu9" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#area5#page3#dau2#ln55" name="Flow55" to="sv3#area5#page3#pwu4" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area5#page3#dau2#ln68" name="Flow68" to="sv3#area5#mfu2" type="transport" validate="true">
+        <LinkParameter id="sv3#area5#page3#dau2#ln68#par33" name="TaskToWorker_2.oid_KeyCondition29 [oid]" source="data.rel10#role20_ent3#att6" target="sv3#area5#mfu2#su47#kcond29.ent3#att6"/>
+        <LinkParameter id="sv3#area5#page3#dau2#ln68#par40" name="reward_PASSING" source="data.ent2#att9" passing="true"/>
+      </Link>
+      <Link id="sv3#area5#page3#dau2#ln69" name="Flow69" to="sv3#area5#mfu4" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
-    <MultiChoiceIndexUnit gr:x="30" gr:y="285" id="sv3#area5#page3#mciu2" name="Skills" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv3#area5#page3#mciu2#ln17">
+    <MultiChoiceIndexUnit gr:x="30" gr:y="290" id="sv3#area5#page3#mciu2" name="Skills" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv3#area5#page3#mciu2#ln17">
       <Selector id="sv3#area5#page3#mciu2#su1" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area5#page3#mciu2#su1#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel9#role18"/>
       </Selector>
       <Link id="sv3#area5#page3#mciu2#ln17" name="Remove Skills" to="sv3#area5#dcnu1" automaticCoupling="true" type="normal" validate="true"/>
     </MultiChoiceIndexUnit>
-    <MultiChoiceIndexUnit gr:x="0" gr:y="5" id="sv3#area5#page3#mciu1" name="Workers" entity="ent3" linkOrder="sv3#area5#page3#mciu1#ln13" displayAttributes="rel4#role8.userName">
+    <MultiChoiceIndexUnit gr:x="0" gr:y="10" id="sv3#area5#page3#mciu1" name="Pre assigned workers" entity="ent3" linkOrder="sv3#area5#page3#mciu1#ln13" displayAttributes="rel4#role8.userName">
       <Selector id="sv3#area5#page3#mciu1#su10" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area5#page3#mciu1#su10#rcond5" name="RoleCondition5" predicate="in" implied="false" role="rel5#role10"/>
       </Selector>
       <Link id="sv3#area5#page3#mciu1#ln13" name="Remove workers" to="sv3#area5#dcnu3" automaticCoupling="true" type="normal" validate="true"/>
     </MultiChoiceIndexUnit>
-    <MultiChoiceIndexUnit gr:x="175" gr:y="5" id="sv3#area5#page3#mciu6" name="Workers to add" entity="ent3" linkOrder="sv3#area5#page3#mciu6#ln14" displayAttributes="rel4#role8.userName">
+    <MultiChoiceIndexUnit gr:x="175" gr:y="10" id="sv3#area5#page3#mciu6" name="Add Pre assigned workers" entity="ent3" linkOrder="sv3#area5#page3#mciu6#ln14" displayAttributes="rel4#role8.userName">
       <Selector id="sv3#area5#page3#mciu6#su23" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area5#page3#mciu6#su23#rcond7" name="RoleCondition7" predicate="notIn" implied="false" role="rel5#role10"/>
       </Selector>
       <Link id="sv3#area5#page3#mciu6#ln14" name="Add workers" to="sv3#area5#cnu3" automaticCoupling="true" type="normal" validate="true"/>
     </MultiChoiceIndexUnit>
-    <MultiChoiceIndexUnit gr:x="170" gr:y="285" id="sv3#area5#page3#mciu8" name="Skills to add" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv3#area5#page3#mciu8#ln44">
+    <MultiChoiceIndexUnit gr:x="170" gr:y="290" id="sv3#area5#page3#mciu8" name="Skills to add" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv3#area5#page3#mciu8#ln44">
       <Selector id="sv3#area5#page3#mciu8#su19" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area5#page3#mciu8#su19#rcond13" name="RoleCondition13" predicate="notIn" implied="false" role="rel9#role18"/>
       </Selector>
       <Link id="sv3#area5#page3#mciu8#ln44" name="Add Skill" to="sv3#area5#cnu5" automaticCoupling="true" type="normal" validate="true"/>
     </MultiChoiceIndexUnit>
-    <MultiChoiceIndexUnit gr:x="350" gr:y="0" id="sv3#area5#page3#mciu5" name="Prefered workers" linkOrder="sv3#area5#page3#mciu5#ln19" entity="ent3" displayAttributes="rel4#role8.userName">
+    <MultiChoiceIndexUnit gr:x="400" gr:y="0" id="sv3#area5#page3#mciu5" name="Prefered workers for pre assignment" linkOrder="sv3#area5#page3#mciu5#ln19" entity="ent3" displayAttributes="rel4#role8.userName">
       <Link id="sv3#area5#page3#mciu5#ln19" name="Add workers" to="sv3#area5#cnu3" automaticCoupling="true" type="normal" validate="true"/>
       <Selector id="sv3#area5#page3#mciu5#su8" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area5#page3#mciu5#su8#rcond2" name="RoleCondition2" predicate="notIn" implied="false" role="rel5#role10"/>
         <AttributesCondition id="sv3#area5#page3#mciu5#su8#acond1" name="AttCondition1" predicate="gteq" booleanOperator="or" implied="false" attributes="ent3#att10" value="10"/>
       </Selector>
     </MultiChoiceIndexUnit>
-    <MultiChoiceIndexUnit gr:x="310" gr:y="280" id="sv3#area5#page3#mciu7" name="Associated Items" entity="ent1" linkOrder="sv3#area5#page3#mciu7#ln51" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4">
+    <MultiChoiceIndexUnit gr:x="310" gr:y="285" id="sv3#area5#page3#mciu7" name="Associated Items" entity="ent1" linkOrder="sv3#area5#page3#mciu7#ln51" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4">
       <Selector id="sv3#area5#page3#mciu7#su9" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area5#page3#mciu7#su9#rcond8" name="RoleCondition8" predicate="in" implied="false" role="rel3#role5"/>
       </Selector>
       <Link id="sv3#area5#page3#mciu7#ln51" name="Remove Items" to="sv3#area5#dcnu4" automaticCoupling="true" type="normal" validate="true"/>
     </MultiChoiceIndexUnit>
-    <MultiChoiceIndexUnit gr:x="470" gr:y="280" id="sv3#area5#page3#mciu9" name="Associated Items to add" entity="ent1" linkOrder="sv3#area5#page3#mciu9#ln52" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4">
+    <MultiChoiceIndexUnit gr:x="470" gr:y="285" id="sv3#area5#page3#mciu9" name="Associated Items to add" entity="ent1" linkOrder="sv3#area5#page3#mciu9#ln52" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4">
       <Selector id="sv3#area5#page3#mciu9#su14" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area5#page3#mciu9#su14#rcond10" name="RoleCondition10" predicate="notIn" implied="false" role="rel3#role5"/>
       </Selector>
       <Link id="sv3#area5#page3#mciu9#ln52" name="Add Items" to="sv3#area5#cnu1" automaticCoupling="true" type="normal" validate="true"/>
     </MultiChoiceIndexUnit>
-    <PowerIndexUnit gr:x="420" gr:y="150" id="sv3#area5#page3#pwu4" name="Items" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4" linkOrder="sv3#area5#page3#pwu4#ln57">
+    <PowerIndexUnit gr:x="420" gr:y="155" id="sv3#area5#page3#pwu4" name="Items" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4" linkOrder="sv3#area5#page3#pwu4#ln57">
       <Selector id="sv3#area5#page3#pwu4#su36" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area5#page3#pwu4#su36#rcond16" name="RoleCondition16" predicate="in" implied="false" role="rel3#role5"/>
       </Selector>
       <Link id="sv3#area5#page3#pwu4#ln57" name="Item Details" to="sv3#area5#page4#dau4" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
+    <EntryUnit gr:x="685" gr:y="20" id="sv3#area5#page3#enu9" name="Work is satisfied ?" linkOrder="sv3#area5#page3#enu9#ln67">
+      <Field id="sv3#area5#page3#enu9#fld26" name="Accuracy" type="float" modifiable="true"/>
+      <Link id="sv3#area5#page3#enu9#ln67" name="Complete task" to="sv3#area5#mfu2" type="normal" validate="true">
+        <LinkParameter id="sv3#area5#page3#enu9#ln67#par36" name="Accuracy_accuracy" source="sv3#area5#page3#enu9#fld26" target="sv3#area5#mfu2.ent3#att10"/>
+      </Link>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -80,6 +91,10 @@
           <layout:Attribute attribute="ent2#att9"/>
           <layout:Attribute attribute="ent2#att16"/>
           <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="rel10#role20.ent3#att6"/>
+          <layout:Attribute attribute="rel10#role20.ent3#att10"/>
+          <layout:Attribute attribute="rel10#role20.ent3#att29"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -269,6 +284,25 @@
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att4"/>
           <layout:Link link="sv3#area5#page3#pwu4#ln57"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page3#enu9">
+          <layout:Field field="sv3#area5#page3#enu9#fld26"/>
+          <layout:Link link="sv3#area5#page3#enu9#ln67"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

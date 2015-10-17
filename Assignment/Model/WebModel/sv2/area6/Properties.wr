@@ -1,5 +1,6 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="75" gr:y="195" id="sv2#area6" name="Worker area" landmark="true" customURLName="worker" defaultPage="sv2#area6#page9">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="75" gr:y="190" id="sv2#area6" name="Worker area" landmark="true" customURLName="worker" defaultPage="sv2#area6#page9">
   <OperationUnits>
-    <LogoutUnit gr:x="215" gr:y="330" id="sv2#area6#lou2" name="LogoutWorker" siteView="sv1" customDescriptor="false" customURLName="logout-worker"/>
+    <LogoutUnit gr:x="155" gr:y="335" id="sv2#area6#lou2" name="LogoutWorker" siteView="sv1" customDescriptor="false" customURLName="logout-worker"/>
+    <CreateUnit gr:x="165" gr:y="565" id="sv2#area6#cru6" name="Add Annotation" entity="ent4"/>
   </OperationUnits>
 </Area>

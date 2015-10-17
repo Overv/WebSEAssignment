@@ -16,5 +16,13 @@
         <KeyCondition id="sv2#dcnu2#su12#kcond10" name="KeyCondition13" predicate="in" implied="false"/>
       </TargetSelector>
     </DisconnectUnit>
+    <ConnectUnit gr:x="690" gr:y="40" id="sv2#cnu4" name="Assign Task" relationship="rel10#role20">
+      <SourceSelector id="sv2#cnu4#su45" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu4#su45#kcond27" name="KeyCondition27" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#cnu4#su46" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu4#su46#kcond28" name="KeyCondition28" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
   </OperationUnits>
 </SiteView>
