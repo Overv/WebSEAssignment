@@ -13,6 +13,8 @@
       <Link id="sv3#area5#page3#dau2#ln43" name="Flow43" to="sv3#area5#page3#mciu8" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#area5#page3#dau2#ln45" name="Flow45" to="sv3#area5#cnu5" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#area5#page3#dau2#ln16" name="Flow16" to="sv3#area5#page3#mciu5" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area5#page3#dau2#ln53" name="Flow53" to="sv3#area5#dcnu4" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area5#page3#dau2#ln54" name="Flow54" to="sv3#area5#cnu1" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
     <MultiChoiceIndexUnit gr:x="30" gr:y="285" id="sv3#area5#page3#mciu2" name="Skills" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv3#area5#page3#mciu2#ln17">
       <Selector id="sv3#area5#page3#mciu2#su1" defaultPolicy="fill" booleanOperator="and">
@@ -32,7 +34,7 @@
       </Selector>
       <Link id="sv3#area5#page3#mciu6#ln14" name="Add workers" to="sv3#area5#cnu3" automaticCoupling="true" type="normal" validate="true"/>
     </MultiChoiceIndexUnit>
-    <MultiChoiceIndexUnit gr:x="240" gr:y="285" id="sv3#area5#page3#mciu8" name="Skills to add" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv3#area5#page3#mciu8#ln44">
+    <MultiChoiceIndexUnit gr:x="170" gr:y="285" id="sv3#area5#page3#mciu8" name="Skills to add" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv3#area5#page3#mciu8#ln44">
       <Selector id="sv3#area5#page3#mciu8#su19" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area5#page3#mciu8#su19#rcond13" name="RoleCondition13" predicate="notIn" implied="false" role="rel9#role18"/>
       </Selector>
@@ -44,6 +46,18 @@
         <RelationshipRoleCondition id="sv3#area5#page3#mciu5#su8#rcond2" name="RoleCondition2" predicate="notIn" implied="false" role="rel5#role10"/>
         <AttributesCondition id="sv3#area5#page3#mciu5#su8#acond1" name="AttCondition1" predicate="gteq" booleanOperator="or" implied="false" attributes="ent3#att10" value="10"/>
       </Selector>
+    </MultiChoiceIndexUnit>
+    <MultiChoiceIndexUnit gr:x="310" gr:y="290" id="sv3#area5#page3#mciu7" name="Associated Items" entity="ent1" linkOrder="sv3#area5#page3#mciu7#ln51">
+      <Selector id="sv3#area5#page3#mciu7#su9" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area5#page3#mciu7#su9#rcond8" name="RoleCondition8" predicate="in" implied="false" role="rel3#role5"/>
+      </Selector>
+      <Link id="sv3#area5#page3#mciu7#ln51" name="Flow51" to="sv3#area5#dcnu4" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiChoiceIndexUnit>
+    <MultiChoiceIndexUnit gr:x="460" gr:y="295" id="sv3#area5#page3#mciu9" name="Associated Items to add" entity="ent1" linkOrder="sv3#area5#page3#mciu9#ln52">
+      <Selector id="sv3#area5#page3#mciu9#su14" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area5#page3#mciu9#su14#rcond10" name="RoleCondition10" predicate="notIn" implied="false" role="rel3#role5"/>
+      </Selector>
+      <Link id="sv3#area5#page3#mciu9#ln52" name="Flow52" to="sv3#area5#cnu1" automaticCoupling="true" type="normal" validate="true"/>
     </MultiChoiceIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -180,6 +194,42 @@
         <layout:Unit unitId="sv3#area5#page3#mciu5">
           <layout:Link link="sv3#area5#page3#mciu5#ln19"/>
           <layout:Attribute attribute="rel4#role8.userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page3#mciu7">
+          <layout:Link link="sv3#area5#page3#mciu7#ln51"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page3#mciu9">
+          <layout:Link link="sv3#area5#page3#mciu9#ln52"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

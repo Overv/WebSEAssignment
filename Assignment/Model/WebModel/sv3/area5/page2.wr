@@ -8,6 +8,8 @@
       <Link id="sv3#area5#page2#dau1#ln36" name="Flow36" to="sv3#area5#cru7" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#area5#page2#dau1#ln42" name="Flow42" to="sv3#area5#mfu1" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#area5#page2#dau1#ln46" name="Flow46" to="sv3#area5#page2#enu7" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area5#page2#dau1#ln49" name="Flow49" to="sv3#area5#cru8" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area5#page2#dau1#ln50" name="Flow50" to="sv3#area5#page2#pwu5" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
     <PowerIndexUnit gr:x="0" gr:y="105" id="sv3#area5#page2#pwu2" name="AnnotationCampaign Tasks" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att5 ent2#att23 ent2#att7 ent2#att8 ent2#att9 ent2#att16 ent2#att17" linkOrder="sv3#area5#page2#pwu2#ln37">
       <Selector id="sv3#area5#page2#pwu2#su4" defaultPolicy="fill" booleanOperator="and">
@@ -15,7 +17,7 @@
       </Selector>
       <Link id="sv3#area5#page2#pwu2#ln37" name="Task details" to="sv3#area5#page3#dau2" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
-    <EntryUnit gr:x="385" gr:y="140" id="sv3#area5#page2#enu8" name="Add Task" linkOrder="sv3#area5#page2#enu8#ln23" fieldOrder="sv3#area5#page2#enu8#fld21 sv3#area5#page2#enu8#fld15 sv3#area5#page2#enu8#fld16 sv3#area5#page2#enu8#fld17 sv3#area5#page2#enu8#fld18">
+    <EntryUnit gr:x="410" gr:y="135" id="sv3#area5#page2#enu8" name="Add Task" linkOrder="sv3#area5#page2#enu8#ln23" fieldOrder="sv3#area5#page2#enu8#fld21 sv3#area5#page2#enu8#fld15 sv3#area5#page2#enu8#fld16 sv3#area5#page2#enu8#fld17 sv3#area5#page2#enu8#fld18">
       <Field id="sv3#area5#page2#enu8#fld21" name="Title" type="string" modifiable="true"/>
       <Link id="sv3#area5#page2#enu8#ln23" name="Add Task" to="sv3#area5#cru7" type="normal" validate="true">
         <LinkParameter id="sv3#area5#page2#enu8#ln23#par49" name="false_completed" sourceValue="false" target="sv3#area5#cru7.ent2#att23"/>
@@ -34,6 +36,13 @@
       <Field id="sv3#area5#page2#enu7#fld22" name="Finished" type="boolean" modifiable="true" attribute="ent5#att25"/>
       <Link id="sv3#area5#page2#enu7#ln47" name="Change Status" to="sv3#area5#mfu1" automaticCoupling="true" type="normal" validate="true"/>
     </EntryUnit>
+    <EntryUnit gr:x="305" gr:y="145" id="sv3#area5#page2#enu6" name="Add Item" linkOrder="sv3#area5#page2#enu6#ln41" entity="ent1" fieldOrder="sv3#area5#page2#enu6#fld19 sv3#area5#page2#enu6#fld20 sv3#area5#page2#enu6#fld23">
+      <Link id="sv3#area5#page2#enu6#ln41" name="Add item" to="sv3#area5#cru8" automaticCoupling="true" type="normal" validate="true"/>
+      <Field id="sv3#area5#page2#enu6#fld19" name="title" type="string" modifiable="true" attribute="ent1#att2"/>
+      <Field id="sv3#area5#page2#enu6#fld20" name="caption" type="string" modifiable="true" attribute="ent1#att3"/>
+      <Field id="sv3#area5#page2#enu6#fld23" name="url" type="string" modifiable="true" attribute="ent1#att4"/>
+    </EntryUnit>
+    <PowerIndexUnit gr:x="220" gr:y="130" id="sv3#area5#page2#pwu5" name="Items" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -109,6 +118,62 @@
         <layout:Unit unitId="sv3#area5#page2#enu7">
           <layout:Field field="sv3#area5#page2#enu7#fld22"/>
           <layout:Link link="sv3#area5#page2#enu7#ln47"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page2#enu6">
+          <layout:Link link="sv3#area5#page2#enu6#ln41"/>
+          <layout:Field field="sv3#area5#page2#enu6#fld19"/>
+          <layout:Field field="sv3#area5#page2#enu6#fld20"/>
+          <layout:Field field="sv3#area5#page2#enu6#fld23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page2#pwu5">
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
