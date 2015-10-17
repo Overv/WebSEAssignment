@@ -29,6 +29,7 @@
       <Link id="sv2#area6#page9#dau14#ln21" name="Flow21" to="sv2#area6#page9#pwu3" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv2#area6#page9#dau14#ln64" name="Flow64" to="sv2#area6#page9#mciu10" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv2#area6#page9#dau14#ln66" name="Flow66" to="sv2#cnu4" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#area6#page9#dau14#ln77" name="Flow77" to="sv2#area6#page9#seu5" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
     <MultiMessageUnit id="sv2#area6#page9#mssu7" name="Worker OID" gr:x="55" gr:y="150"/>
     <MultiChoiceIndexUnit id="sv2#area6#page9#mciu3" name="Skills" linkOrder="sv2#area6#page9#mciu3#ln32" gr:x="0" gr:y="10" entity="ent7" displayAttributes="ent7#att21">
@@ -54,9 +55,22 @@
     <MultiChoiceIndexUnit gr:x="560" gr:y="0" id="sv2#area6#page9#mciu10" name="Available tasks to execute" entity="ent2" linkOrder="sv2#area6#page9#mciu10#ln65" displayAttributes="ent2#att5 ent2#att23 ent2#att7 ent2#att8 ent2#att9 ent2#att16 ent2#att17 ent2#att18">
       <Selector id="sv2#area6#page9#mciu10#su44" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#area6#page9#mciu10#su44#rcond15" name="RoleCondition15" predicate="in" implied="false" role="rel5#role9"/>
+        <KeyCondition id="sv2#area6#page9#mciu10#su44#kcond35" name="KeyCondition35" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv2#area6#page9#mciu10#ln65" name="Claim Tasks" to="sv2#cnu4" automaticCoupling="true" type="normal" validate="true"/>
     </MultiChoiceIndexUnit>
+    <SelectorUnit gr:x="705" gr:y="140" id="sv2#area6#page9#seu5" name="Selector5" entity="ent7">
+      <Selector id="sv2#area6#page9#seu5#su54" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area6#page9#seu5#su54#rcond26" name="RoleCondition26" predicate="in" implied="false" role="rel8#role16"/>
+      </Selector>
+      <Link id="sv2#area6#page9#seu5#ln79" name="Flow79" to="sv2#area6#page9#seu6" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="840" gr:y="35" id="sv2#area6#page9#seu6" name="Selector6" entity="ent2">
+      <Selector id="sv2#area6#page9#seu6#su55" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area6#page9#seu6#su55#rcond29" name="RoleCondition29" predicate="in" implied="false" role="rel9#role17"/>
+      </Selector>
+      <Link id="sv2#area6#page9#seu6#ln80" name="Flow80" to="sv2#area6#page9#mciu10" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -208,6 +222,20 @@
           <layout:Attribute attribute="ent2#att18"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
