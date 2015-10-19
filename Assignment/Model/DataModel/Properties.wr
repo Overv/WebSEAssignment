@@ -119,7 +119,7 @@
     <RelationshipRole1 id="rel5#role9" name="PreassignedWorkerToTask" maxCard="N">
       <db:JoinColumn attribute="ent3#att6" name="worker_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel5#role10" name="TaskToWorker" maxCard="N">
+    <RelationshipRole2 id="rel5#role10" name="TaskToPreassignedWorker" maxCard="N">
       <db:JoinColumn attribute="ent2#att5" name="task_oid"/>
     </RelationshipRole2>
   </Relationship>
@@ -163,7 +163,7 @@
     <RelationshipRole1 id="rel10#role19" name="WorkerToTask" maxCard="N">
       <db:JoinColumn attribute="ent3#att6" name="worker_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel10#role20" name="TaskToWorker_2" maxCard="1">
+    <RelationshipRole2 id="rel10#role20" name="TaskToWorker" maxCard="1">
       <db:JoinColumn attribute="ent2#att5" name="oid"/>
     </RelationshipRole2>
   </Relationship>

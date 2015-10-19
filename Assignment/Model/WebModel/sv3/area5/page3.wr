@@ -20,7 +20,7 @@
       <Link id="sv3#area5#page3#dau2#ln55" name="Flow55" to="sv3#area5#page3#pwu4" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#area5#page3#dau2#ln69" name="Flow69" to="sv3#area5#mfu4" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#area5#page3#dau2#ln86" name="Flow86" to="sv3#area5#page3#dau7" type="transport" validate="true">
-        <LinkParameter id="sv3#area5#page3#dau2#ln86#par54" name="TaskToWorker_2.oid_KeyCondition36 [oid]" source="data.rel10#role20$ent3#att6" target="sv3#area5#page3#dau7#su56#kcond36.ent3#att6"/>
+        <LinkParameter id="sv3#area5#page3#dau2#ln86#par54" name="TaskToWorker_2.oid_KeyCondition36 [oid]" source="data.rel10#role20_ent3#att6" target="sv3#area5#page3#dau7#su56#kcond36.ent3#att6"/>
       </Link>
       <Link id="sv3#area5#page3#dau2#ln74" to="sv3#area5#qu2" type="transport" validate="true" name="Flow74">
         <LinkParameter id="sv3#area5#page3#dau2#ln74#par47" name="TaskToWorker_2.oid_WorkerID" source="data.rel10#role20$ent3#att6" target="sv3#area5#qu2.sv3#area5#qu2#qi6"/>
