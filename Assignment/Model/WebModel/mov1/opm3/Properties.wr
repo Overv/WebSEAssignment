@@ -1,0 +1,24 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov1#opm3" name="Assess work">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="150" id="mov1#opm3#icu3">
+      <OKLink id="mov1#opm3#icu3#oln5" name="OKFlow5" to="mov1#opm3#qu6">
+        <LinkParameter id="mov1#opm3#icu3#oln5#par51" name="Accuracy_Accuracy" source="mov1#opm3#icu3#icp2" target="mov1#opm3#qu6.mov1#opm3#qu6#qi2"/>
+        <LinkParameter id="mov1#opm3#icu3#oln5#par52" name="Worker oid_Worker oid" source="mov1#opm3#icu3#icp3" target="mov1#opm3#qu6.mov1#opm3#qu6#qi3"/>
+        <LinkParameter id="mov1#opm3#icu3#oln5#par55" name="Accuracy_PASSING" source="mov1#opm3#icu3#icp2" passing="true"/>
+        <LinkParameter id="mov1#opm3#icu3#oln5#par56" name="Worker oid_PASSING" source="mov1#opm3#icu3#icp3" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp2" name="Accuracy"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp3" name="Worker oid"/>
+    </InputCollectorUnit>
+    <ModuleInstanceUnit id="mov1#opm3#miu8" name="Assess work" gr:x="195" gr:y="0" action="true"/>
+    <QueryUnit gr:x="285" gr:y="160" id="mov1#opm3#qu6" name="Query6" mode="update" language="SQL" db="db1">
+      <OKLink id="mov1#opm3#qu6#oln7" name="OKFlow7" to="mov1#opm3#okcu1" automaticCoupling="true"/>
+      <KOLink id="mov1#opm3#qu6#kln1" name="KOFlow1" to="mov1#opm3#kocu1" automaticCoupling="true"/>
+      <QueryInput id="mov1#opm3#qu6#qi2" name="Accuracy" required="true" type="float"/>
+      <QueryInput id="mov1#opm3#qu6#qi3" name="WorkerOid" required="true" type="integer"/>
+      <QueryText xml:space="preserve">update worker set accuracy = 20 where oid = 1;</QueryText>
+    </QueryUnit>
+    <OKCollectorUnit gr:x="495" gr:y="50" id="mov1#opm3#okcu1" name="Success"/>
+    <KOCollectorUnit gr:x="505" gr:y="175" id="mov1#opm3#kocu1" name="Failure"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,3 +1,5 @@
-<SiteView id="sv3" name="Requester" protected="true" homePage="sv3#area5#page8" landmarks="sv3#area5">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Requester" protected="true" homePage="sv3#area5#page8" landmarks="sv3#area5">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="725" gr:y="545" id="sv3#miu3" action="true"/>
+  </OperationUnits>
 </SiteView>
