@@ -116,7 +116,7 @@
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel5" name="PreassignedWorkers" sourceEntity="ent3" targetEntity="ent2" db:database="db1" db:table="preassignedworkers">
-    <RelationshipRole1 id="rel5#role9" name="WorkerToTask" maxCard="N">
+    <RelationshipRole1 id="rel5#role9" name="PreassignedWorkerToTask" maxCard="N">
       <db:JoinColumn attribute="ent3#att6" name="worker_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel5#role10" name="TaskToWorker" maxCard="N">
@@ -160,15 +160,14 @@
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel10" name="AssignedWorker" sourceEntity="ent3" targetEntity="ent2" gr:bendpoints="48,91,53,-69" db:database="db1" db:table="task">
-    <RelationshipRole1 id="rel10#role19" name="WorkerToTask_2" maxCard="N">
+    <RelationshipRole1 id="rel10#role19" name="WorkerToTask" maxCard="N">
       <db:JoinColumn attribute="ent3#att6" name="worker_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel10#role20" name="TaskToWorker_2" maxCard="1">
       <db:JoinColumn attribute="ent2#att5" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/assignment" username="postgres" password="bGlldmVyZA==" cryptedPassword="true" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="Database1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/assignment" username="postgres" password="cG9zdGdyZXM=" schema="public" cryptedPassword="true"/>
   <Relationship id="rel11" name="AnnotationCampaign_Item" sourceEntity="ent5" targetEntity="ent1" db:database="db1" db:table="item">
     <RelationshipRole1 id="rel11#role21" name="AnnotationCampaignToItem" maxCard="N">
       <db:JoinColumn attribute="ent5#att14" name="annotationcampaign_oid"/>

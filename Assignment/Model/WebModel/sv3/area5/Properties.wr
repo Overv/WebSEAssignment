@@ -49,7 +49,7 @@
         <KeyCondition id="sv3#area5#dcnu4#su31#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
       </TargetSelector>
     </DisconnectUnit>
-    <ConnectUnit gr:x="825" gr:y="640" id="sv3#area5#cnu1" name="Add items" relationship="rel3#role5">
+    <ConnectUnit gr:x="690" gr:y="660" id="sv3#area5#cnu1" name="Add items" relationship="rel3#role5">
       <SourceSelector id="sv3#area5#cnu1#su32" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#cnu1#su32#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
       </SourceSelector>
@@ -68,9 +68,32 @@
         <KeyCondition id="sv3#area5#mfu4#su49#kcond31" name="KeyCondition31" predicate="in" implied="false"/>
       </Selector>
     </ModifyUnit>
-    <ModuleInstanceUnit gr:x="955" gr:y="170" id="sv3#area5#miu7" moduleId="mov1#opm3">
-      <OKLink id="sv3#area5#miu7#oln9" name="OKFlow9" to="sv3#area5#page3" automaticCoupling="true"/>
-      <KOLink id="sv3#area5#miu7#kln2" name="KOFlow2" to="sv3#area5#page2" automaticCoupling="true"/>
-    </ModuleInstanceUnit>
+    <QueryUnit gr:x="915" gr:y="295" id="sv3#area5#qu2" name="Assess work" mode="update" language="HQL" db="db1">
+      <QueryText xml:space="preserve">update Worker as w set w.accuracy = (:accuracy), piggybank = piggybank + (:reward) where w.oid in (:workeroid)</QueryText>
+      <QueryInput id="sv3#area5#qu2#qi6" name="workeroid" required="true" type="integer"/>
+      <QueryInput id="sv3#area5#qu2#qi7" name="accuracy" required="true" type="float"/>
+      <QueryInput id="sv3#area5#qu2#qi8" name="reward" required="true" type="float"/>
+      <OKLink id="sv3#area5#qu2#oln8" name="OKFlow8" to="sv3#area5#qu3" automaticCoupling="true"/>
+    </QueryUnit>
+    <QueryUnit gr:x="885" gr:y="485" id="sv3#area5#qu3" name="Update campaign budget" mode="update" language="HQL" db="db1">
+      <QueryText xml:space="preserve">update AnnotationCampaign as c set c.budget = c.budget - (:reward) where c.oid in (:campaignoid)</QueryText>
+      <QueryInput id="sv3#area5#qu3#qi9" name="reward" required="true" type="float"/>
+      <QueryInput id="sv3#area5#qu3#qi10" name="campaignoid" required="true" type="integer"/>
+      <OKLink id="sv3#area5#qu3#oln9" name="OKFlow9" to="sv3#area5#dcnu5" automaticCoupling="true"/>
+    </QueryUnit>
+    <DisconnectUnit gr:x="885" gr:y="570" id="sv3#area5#dcnu5" name="Remove worker from task" relationship="rel10#role19">
+      <SourceSelector id="sv3#area5#dcnu5#su51" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area5#dcnu5#su51#kcond32" name="KeyCondition32" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv3#area5#dcnu5#su52" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area5#dcnu5#su52#kcond33" name="KeyCondition33" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv3#area5#dcnu5#oln10" name="OKFlow10" to="sv3#area5#mfu6" automaticCoupling="true"/>
+    </DisconnectUnit>
+    <ModifyUnit gr:x="900" gr:y="720" id="sv3#area5#mfu6" name="Set task completed" entity="ent2">
+      <Selector id="sv3#area5#mfu6#su53" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area5#mfu6#su53#kcond34" name="KeyCondition34" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
   </OperationUnits>
 </Area>

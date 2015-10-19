@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="155" id="sv3#area5#page3" name="Task" customURLName="task">
   <ContentUnits>
-    <DataUnit gr:x="170" gr:y="165" id="sv3#area5#page3#dau2" name="Task details" entity="ent2" displayAttributes="ent2#att5 ent2#att23 ent2#att7 ent2#att8 ent2#att9 ent2#att16 ent2#att17 ent2#att18 rel10#role20.ent3#att6 rel10#role20.ent3#att10 rel10#role20.ent3#att29">
+    <DataUnit gr:x="170" gr:y="165" id="sv3#area5#page3#dau2" name="Task details" entity="ent2" displayAttributes="ent2#att5 ent2#att23 ent2#att7 ent2#att8 ent2#att9 ent2#att16 ent2#att17 ent2#att18">
       <Selector id="sv3#area5#page3#dau2#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#page3#dau2#su7#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
@@ -19,11 +19,23 @@
       <Link id="sv3#area5#page3#dau2#ln40" name="Flow40" to="sv3#area5#page3#mciu9" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#area5#page3#dau2#ln55" name="Flow55" to="sv3#area5#page3#pwu4" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#area5#page3#dau2#ln69" name="Flow69" to="sv3#area5#mfu4" automaticCoupling="true" type="transport" validate="true"/>
-      <Link id="sv3#area5#page3#dau2#ln84" name="Flow84" to="sv3#area5#miu7" type="transport" validate="true">
-        <LinkParameter id="sv3#area5#page3#dau2#ln84#par53" name="TaskToWorker_2.oid_Worker oid" source="data.rel10#role20$ent3#att6" target="sv3#area5#miu7.mov1#opm3#icu3#icp3"/>
-      </Link>
       <Link id="sv3#area5#page3#dau2#ln86" name="Flow86" to="sv3#area5#page3#dau7" type="transport" validate="true">
         <LinkParameter id="sv3#area5#page3#dau2#ln86#par54" name="TaskToWorker_2.oid_KeyCondition36 [oid]" source="data.rel10#role20$ent3#att6" target="sv3#area5#page3#dau7#su56#kcond36.ent3#att6"/>
+      </Link>
+      <Link id="sv3#area5#page3#dau2#ln74" to="sv3#area5#qu2" type="transport" validate="true" name="Flow74">
+        <LinkParameter id="sv3#area5#page3#dau2#ln74#par47" name="TaskToWorker_2.oid_WorkerID" source="data.rel10#role20$ent3#att6" target="sv3#area5#qu2.sv3#area5#qu2#qi6"/>
+        <LinkParameter id="sv3#area5#page3#dau2#ln74#par53" name="reward_reward" source="data.ent2#att9" target="sv3#area5#qu2.sv3#area5#qu2#qi8"/>
+      </Link>
+      <Link id="sv3#area5#page3#dau2#ln75" name="Flow75" to="sv3#area5#qu3" type="transport" validate="true">
+        <LinkParameter id="sv3#area5#page3#dau2#ln75#par58" name="reward_reward" source="data.ent2#att9" target="sv3#area5#qu3.sv3#area5#qu3#qi9"/>
+      </Link>
+      <Link id="sv3#area5#page3#dau2#ln76" name="Flow76" to="sv3#area5#page3#seu1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area5#page3#dau2#ln81" name="Flow81" to="sv3#area5#dcnu5" type="transport" validate="true">
+        <LinkParameter id="sv3#area5#page3#dau2#ln81#par60" name="oid_KeyCondition33 [oid] [Task] [Target]" source="data.ent2#att5" target="sv3#area5#dcnu5#su52#kcond33.ent2#att5"/>
+      </Link>
+      <Link id="sv3#area5#page3#dau2#ln83" name="Flow83" to="sv3#area5#mfu6" type="transport" validate="true">
+        <LinkParameter id="sv3#area5#page3#dau2#ln83#par61" name="true_completed" sourceValue="true" target="sv3#area5#mfu6.ent2#att23"/>
+        <LinkParameter id="sv3#area5#page3#dau2#ln83#par62" name="oid_KeyCondition34 [oid]" source="data.ent2#att5" target="sv3#area5#mfu6#su53#kcond34.ent2#att5"/>
       </Link>
     </DataUnit>
     <MultiChoiceIndexUnit gr:x="95" gr:y="290" id="sv3#area5#page3#mciu2" name="Skills" entity="ent7" displayAttributes="ent7#att21" linkOrder="sv3#area5#page3#mciu2#ln17">
@@ -75,18 +87,26 @@
       </Selector>
       <Link id="sv3#area5#page3#pwu4#ln57" name="Item Details" to="sv3#area5#page4#dau4" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
-    <EntryUnit gr:x="740" gr:y="140" id="sv3#area5#page3#enu9" name="Work is satisfied ?" linkOrder="sv3#area5#page3#enu9#ln83">
+    <EntryUnit gr:x="720" gr:y="45" id="sv3#area5#page3#enu9" name="Work is satisfied ?" linkOrder="sv3#area5#page3#enu9#ln73">
       <Field id="sv3#area5#page3#enu9#fld26" name="Accuracy" type="float" modifiable="true"/>
-      <Link id="sv3#area5#page3#enu9#ln83" name="Flow83" to="sv3#area5#miu7" type="normal" validate="true">
-        <LinkParameter id="sv3#area5#page3#enu9#ln83#par48" name="Accuracy_Accuracy" source="sv3#area5#page3#enu9#fld26" target="sv3#area5#miu7.mov1#opm3#icu3#icp2"/>
-        <LinkParameter id="sv3#area5#page3#enu9#ln83#par57" name="Accuracy_PASSING" source="sv3#area5#page3#enu9#fld26" passing="true"/>
+      <Link id="sv3#area5#page3#enu9#ln73" name="Assess work" to="sv3#area5#qu2" type="normal" validate="true">
+        <LinkParameter id="sv3#area5#page3#enu9#ln73#par48" name="Accuracy_accuracy" source="sv3#area5#page3#enu9#fld26" target="sv3#area5#qu2.sv3#area5#qu2#qi7"/>
       </Link>
     </EntryUnit>
     <DataUnit gr:x="0" gr:y="165" id="sv3#area5#page3#dau7" name="Worker Details" entity="ent3" displayAttributes="ent3#att6 ent3#att10 ent3#att29">
       <Selector id="sv3#area5#page3#dau7#su56" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area5#page3#dau7#su56#kcond36" name="KeyCondition36" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv3#area5#page3#dau7#ln82" name="Flow82" to="sv3#area5#dcnu5" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
+    <SelectorUnit gr:x="660" gr:y="150" id="sv3#area5#page3#seu1" name="Selector1" entity="ent5" maxResults="1">
+      <Selector id="sv3#area5#page3#seu1#su48" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area5#page3#seu1#su48#rcond14" name="RoleCondition14" predicate="in" implied="false" role="rel2#role4"/>
+      </Selector>
+      <Link id="sv3#area5#page3#seu1#ln78" name="Flow78" to="sv3#area5#qu3" type="transport" validate="true">
+        <LinkParameter id="sv3#area5#page3#seu1#ln78#par59" name="oid_campaignoid" source="ent5#att14Array" target="sv3#area5#qu3.sv3#area5#qu3#qi10"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -100,9 +120,6 @@
           <layout:Attribute attribute="ent2#att16"/>
           <layout:Attribute attribute="ent2#att17"/>
           <layout:Attribute attribute="ent2#att18"/>
-          <layout:Attribute attribute="rel10#role20.ent3#att6"/>
-          <layout:Attribute attribute="rel10#role20.ent3#att10"/>
-          <layout:Attribute attribute="rel10#role20.ent3#att29"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -310,7 +327,7 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area5#page3#enu9">
           <layout:Field field="sv3#area5#page3#enu9#fld26"/>
-          <layout:Link link="sv3#area5#page3#enu9#ln83"/>
+          <layout:Link link="sv3#area5#page3#enu9#ln73"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
